@@ -1,0 +1,190 @@
+---
+import Base from "../layouts/Base.astro";
+import { Icon } from "astro-icon/components";
+---
+<Base>
+  <!-- Hero -->
+  <section class="mx-auto max-w-6xl px-6 pt-20 pb-16 text-center">
+    <p class="inline-block rounded-full bg-primary/5 text-primary text-xs font-semibold uppercase tracking-wider px-3 py-1">
+      Chrome extension · v1.0
+    </p>
+    <h1 class="mt-6 text-5xl sm:text-6xl font-bold tracking-tight text-ink leading-[1.05]">
+      Your brand's most valuable artifacts. <br class="hidden sm:block" />
+      <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">At work on every page.</span>
+    </h1>
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="#" class="rounded-lg bg-primary px-6 py-3 text-white font-semibold hover:opacity-90 transition">
+        Add to Chrome — Free
+      </a>
+      <a href="#how" class="rounded-lg px-6 py-3 text-ink/70 font-semibold hover:text-primary transition">
+        See how it works →
+      </a>
+    </div>
+    <p class="mt-4 text-xs text-ink/50">
+      Free forever for 5 analyses/month · Pro from $9/mo · No credit card to start
+    </p>
+  </section>
+
+  <!-- Three modes -->
+  <section id="how" class="mx-auto max-w-6xl px-6 py-16">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-4xl font-bold text-ink leading-tight">
+        Audit your site. Scout the competition. <br class="hidden sm:block" />
+        Forge what's next — without leaving the tab.
+      </h2>
+      <p class="mt-5 text-ink/60 max-w-xl mx-auto text-lg italic">
+        You may not be a wizard in a tower, but Reliquery will certainly make you look like one.
+      </p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- Audit -->
+      <div class="rounded-2xl border border-black/5 bg-white p-7">
+        <div class="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+          <Icon name="lucide:shield-check" class="w-6 h-6" />
+        </div>
+        <h3 class="mt-5 text-xl font-bold text-ink">Audit</h3>
+        <p class="mt-1 text-sm font-semibold text-primary uppercase tracking-wider">Protect</p>
+        <p class="mt-3 text-sm text-ink/70 leading-relaxed">
+          Score any page on your site against your own brand documents.
+          Every drift finding cites the exact passage it violates.
+        </p>
+      </div>
+
+      <!-- Scout -->
+      <div class="rounded-2xl border border-black/5 bg-white p-7">
+        <div class="w-11 h-11 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
+          <Icon name="lucide:binoculars" class="w-6 h-6" />
+        </div>
+        <h3 class="mt-5 text-xl font-bold text-ink">Scout</h3>
+        <p class="mt-1 text-sm font-semibold text-accent uppercase tracking-wider">Learn</p>
+        <p class="mt-3 text-sm text-ink/70 leading-relaxed">
+          Side-by-side competitive intelligence. Where they're stronger,
+          where they're weak, what to do about it. Export a battle card.
+        </p>
+      </div>
+
+      <!-- Forge -->
+      <div class="rounded-2xl border border-black/5 bg-white p-7">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-primary to-accent text-white flex items-center justify-center">
+          <Icon name="lucide:anvil" class="w-6 h-6" />
+        </div>
+        <h3 class="mt-5 text-xl font-bold text-ink">Forge</h3>
+        <p class="mt-1 text-sm font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent uppercase tracking-wider">Build</p>
+        <p class="mt-3 text-sm text-ink/70 leading-relaxed">
+          Type a design instruction in plain English. Reliquery applies the
+          CSS and HTML changes live to the page using Claude Opus.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Reliquary explainer -->
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <div class="rounded-3xl bg-primary text-white p-10 md:p-14">
+      <div class="max-w-3xl">
+        <p class="text-accent text-xs font-bold uppercase tracking-widest">The Brand Reliquary</p>
+        <h2 class="mt-3 text-3xl md:text-4xl font-bold">Your brand isn't a vibe. It's a pact.</h2>
+        <p class="mt-5 text-white/80 leading-relaxed text-lg">
+          Connect a GitHub repo or local folder of the documents that define your pact —
+          voice guidelines, positioning, design principles, the promises your brand actually makes.
+          Every Reliquery analysis holds the page in front of you accountable to those promises,
+          not to generic best practices.
+        </p>
+        <div class="mt-8 grid sm:grid-cols-3 gap-4 text-sm">
+          <div class="rounded-xl bg-white/10 p-4">
+            <p class="font-semibold">Stateless backend</p>
+            <p class="mt-1 text-white/70">Documents sent per-request. Never stored.</p>
+          </div>
+          <div class="rounded-xl bg-white/10 p-4">
+            <p class="font-semibold">Token isolation</p>
+            <p class="mt-1 text-white/70">GitHub tokens live in session storage only.</p>
+          </div>
+          <div class="rounded-xl bg-white/10 p-4">
+            <p class="font-semibold">BYO API key</p>
+            <p class="mt-1 text-white/70">Forge runs on your own Anthropic key.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built for -->
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-ink">Built for people who care how their brand shows up.</h2>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      <div class="rounded-xl bg-white p-6 border border-black/5">
+        <p class="font-bold text-ink">Founders & Brand Owners</p>
+        <p class="mt-2 text-sm text-ink/70">You wrote the brand voice doc yourself. You feel personally responsible when something is off-brand. Reliquery catches drift without an agency.</p>
+      </div>
+      <div class="rounded-xl bg-white p-6 border border-black/5">
+        <p class="font-bold text-ink">Marketing Managers</p>
+        <p class="mt-2 text-sm text-ink/70">You own brand consistency across landing pages, blog posts, and product copy. Reliquery flags drift before it ships.</p>
+      </div>
+      <div class="rounded-xl bg-white p-6 border border-black/5">
+        <p class="font-bold text-ink">Product Designers & Strategists</p>
+        <p class="mt-2 text-sm text-ink/70">You think in competitive positioning. Reliquery shows you what competitors do differently and lets you iterate without a dev cycle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="mx-auto max-w-6xl px-6 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-ink">Simple pricing. Try it free.</h2>
+      <p class="mt-3 text-ink/60">No credit card to start. Upgrade when you connect a Brand Reliquary.</p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- Free -->
+      <div class="rounded-2xl border border-black/5 bg-white p-7">
+        <p class="font-bold text-ink">Free</p>
+        <p class="mt-1 text-3xl font-bold text-ink">$0</p>
+        <p class="mt-1 text-sm text-ink/50">forever</p>
+        <ul class="mt-6 space-y-2 text-sm text-ink/70">
+          <li>✓ 5 analyses / month</li>
+          <li>✓ Audit & Scout modes</li>
+          <li>✓ Home Base configuration</li>
+          <li>— No Brand Reliquary</li>
+        </ul>
+      </div>
+      <!-- Pro -->
+      <div class="rounded-2xl border-2 border-primary bg-white p-7 relative">
+        <span class="absolute -top-3 left-7 bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Popular</span>
+        <p class="font-bold text-primary">Pro</p>
+        <p class="mt-1 text-3xl font-bold text-ink">$9<span class="text-base font-normal text-ink/50">/mo</span></p>
+        <p class="mt-1 text-sm text-ink/50">or $79/yr</p>
+        <ul class="mt-6 space-y-2 text-sm text-ink/70">
+          <li>✓ 100 analyses / month</li>
+          <li>✓ All three modes</li>
+          <li>✓ Brand Reliquary connection</li>
+          <li>✓ Battle Card export</li>
+          <li>✓ 30-day audit history</li>
+        </ul>
+      </div>
+      <!-- Team -->
+      <div class="rounded-2xl border border-black/5 bg-white p-7">
+        <p class="font-bold text-ink">Team</p>
+        <p class="mt-1 text-3xl font-bold text-ink">$39<span class="text-base font-normal text-ink/50">/mo</span></p>
+        <p class="mt-1 text-sm text-ink/50">or $349/yr</p>
+        <ul class="mt-6 space-y-2 text-sm text-ink/70">
+          <li>✓ 500 analyses / month</li>
+          <li>✓ Multi-user Reliquary</li>
+          <li>✓ Shared Battle Cards</li>
+          <li>✓ Unlimited audit history</li>
+          <li>✓ Priority support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="mx-auto max-w-4xl px-6 py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-ink">Stop watching your brand drift.</h2>
+    <p class="mt-4 text-ink/70 text-lg">Add Reliquery to Chrome and audit your first page in 30 seconds.</p>
+    <a href="#" class="mt-8 inline-block rounded-lg bg-primary px-8 py-4 text-white font-semibold text-lg hover:opacity-90 transition">
+      Add to Chrome — Free
+    </a>
+  </section>
+</Base>

@@ -1,0 +1,55 @@
+---
+const { title = "Reliquery — Brand intelligence for any webpage", description = "Audit your brand. Scout competitors. Forge new designs. Real-time AI brand intelligence in a Chrome side panel." } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <header class="border-b border-black/5">
+      <div class="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2 font-bold text-lg text-primary">
+          <span class="inline-block w-2 h-2 rounded-full bg-accent"></span>
+          Reliquery
+        </a>
+        <nav class="flex items-center gap-6 text-sm">
+          <a href="/#how" class="text-ink/70 hover:text-primary transition">How it works</a>
+          <a href="/#pricing" class="text-ink/70 hover:text-primary transition">Pricing</a>
+          <a href="/privacy" class="text-ink/70 hover:text-primary transition">Privacy</a>
+          <a href="#" class="rounded-lg bg-primary px-4 py-2 text-white font-semibold hover:opacity-90 transition">
+            Add to Chrome
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="border-t border-black/5 mt-24">
+      <div class="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-ink/60">
+        <div>
+          <span class="font-semibold text-primary">Reliquery</span> — Protect. Learn. Build.
+        </div>
+        <div class="flex gap-6">
+          <a href="/privacy" class="hover:text-primary transition">Privacy</a>
+          <a href="/terms" class="hover:text-primary transition">Terms</a>
+          <a href="mailto:support@reliquery.app" class="hover:text-primary transition">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
