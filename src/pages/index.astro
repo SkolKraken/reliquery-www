@@ -39,7 +39,7 @@ import { Icon } from "astro-icon/components";
 
     <div class="grid gap-6 md:grid-cols-3">
       <!-- Audit -->
-      <div class="rounded-2xl border border-black/5 bg-white p-7">
+      <a href="#audit-promo" class="group rounded-2xl border border-black/5 bg-white p-7 block hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5 transition">
         <div class="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
           <Icon name="lucide:shield-check" class="w-6 h-6" />
         </div>
@@ -49,10 +49,11 @@ import { Icon } from "astro-icon/components";
           Score any page on your site against your own brand documents.
           Every drift finding cites the exact passage it violates.
         </p>
-      </div>
+        <p class="mt-4 text-xs font-semibold text-primary opacity-0 group-hover:opacity-100 transition">See it in action ↓</p>
+      </a>
 
       <!-- Scout -->
-      <div class="rounded-2xl border border-black/5 bg-white p-7">
+      <a href="#scout-promo" class="group rounded-2xl border border-black/5 bg-white p-7 block hover:border-accent/30 hover:shadow-lg hover:-translate-y-0.5 transition">
         <div class="w-11 h-11 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
           <Icon name="lucide:binoculars" class="w-6 h-6" />
         </div>
@@ -62,10 +63,11 @@ import { Icon } from "astro-icon/components";
           Side-by-side competitive intelligence. Where they're stronger,
           where they're weak, what to do about it. Export a battle card.
         </p>
-      </div>
+        <p class="mt-4 text-xs font-semibold text-accent opacity-0 group-hover:opacity-100 transition">See it in action ↓</p>
+      </a>
 
       <!-- Forge -->
-      <div class="rounded-2xl border border-black/5 bg-white p-7">
+      <a href="#forge-promo" class="group rounded-2xl border border-black/5 bg-white p-7 block hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5 transition">
         <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-primary to-accent text-white flex items-center justify-center">
           <Icon name="lucide:anvil" class="w-6 h-6" />
         </div>
@@ -75,11 +77,12 @@ import { Icon } from "astro-icon/components";
           Type a design instruction in plain English. Reliquery applies the
           CSS and HTML changes live to the page using Claude Opus.
         </p>
-      </div>
+        <p class="mt-4 text-xs font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition">See it in action ↓</p>
+      </a>
     </div>
   </section>
 
-  <!-- Brand Reliquary explainer -->
+  <!-- Brand Reliquary explainer (moved above the promos) -->
   <section class="mx-auto max-w-6xl px-6 py-16">
     <div class="rounded-3xl bg-primary text-white p-10 md:p-14">
       <div class="max-w-3xl">
@@ -103,6 +106,267 @@ import { Icon } from "astro-icon/components";
           <div class="rounded-xl bg-white/10 p-4">
             <p class="font-semibold">BYO API key</p>
             <p class="mt-1 text-white/70">Forge runs on your own Anthropic key.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- In-depth product showcases (three promos: Audit → Scout → Forge) -->
+  <section id="promos" class="mx-auto max-w-6xl px-6 py-16">
+    <div class="text-center mb-14">
+      <p class="text-xs font-semibold text-ink/50 uppercase tracking-widest">See it in action</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-ink leading-tight">
+        Three modes. One side panel.
+      </h2>
+    </div>
+
+    <!-- Promo 1: Audit showcase (text left, mockup right) -->
+    <div id="audit-promo" class="scroll-mt-24 grid gap-10 md:grid-cols-2 md:gap-14 items-center">
+      <div>
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">Audit · Protect</p>
+        <h3 class="mt-3 text-2xl sm:text-3xl font-bold text-ink leading-tight">
+          Catch drift before it ships.
+        </h3>
+        <p class="mt-4 text-ink/70 leading-relaxed">
+          Score any page against your Brand Reliquary. Reliquery surfaces voice drift,
+          forbidden claims, and off-message copy — each finding cites the exact passage it
+          violates and proposes a rewrite you can ship.
+        </p>
+        <ul class="mt-5 space-y-2 text-sm text-ink/70">
+          <li class="flex gap-2"><span class="text-primary font-bold">—</span> Citations back to your own brand docs</li>
+          <li class="flex gap-2"><span class="text-primary font-bold">—</span> Proposed rewrite with every finding</li>
+          <li class="flex gap-2"><span class="text-primary font-bold">—</span> Runs on any tab, in under a minute</li>
+        </ul>
+      </div>
+      <div class="relative">
+        <!-- Browser mockup: Audit side panel -->
+        <div class="rounded-2xl border border-black/10 bg-white shadow-xl overflow-hidden">
+          <div class="flex items-center gap-2 px-3 py-2.5 bg-[#f0eeea] border-b border-black/5">
+            <div class="flex gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#fd6159]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#fdbc2e]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#27c83f]"></span>
+            </div>
+            <div class="flex-1 ml-2 px-3 py-1 rounded-md bg-white border border-black/5 text-xs text-ink/50 font-mono">
+              reliquery.app
+            </div>
+          </div>
+          <div class="grid grid-cols-[1fr_220px] min-h-[300px]">
+            <!-- page preview -->
+            <div class="p-5 border-r border-black/5">
+              <div class="inline-block rounded-md px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Hero H1</div>
+              <h4 class="mt-2 text-lg font-bold text-ink leading-tight outline-2 outline-dashed outline-accent outline-offset-4 rounded-sm">
+                AI-powered workflow analysis
+              </h4>
+              <p class="mt-3 text-xs text-ink/60 leading-relaxed">
+                Unlock seamless, enterprise-grade insights with our revolutionary platform.
+              </p>
+              <div class="mt-4 h-16 rounded-lg bg-gradient-to-br from-paper to-[#ece8e0]"></div>
+              <div class="mt-3 h-2 w-4/5 bg-[#ece8e0] rounded"></div>
+              <div class="mt-2 h-2 w-2/3 bg-[#ece8e0] rounded"></div>
+            </div>
+            <!-- side panel -->
+            <div class="p-3 bg-[#fcfbf9] flex flex-col gap-2">
+              <div class="flex items-center justify-between pb-2 border-b border-black/5">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-4 h-4 rounded bg-gradient-to-br from-primary to-accent grid place-items-center text-white text-[9px] font-serif font-bold">R</span>
+                  <span class="font-serif font-bold text-xs">Reliquery</span>
+                </div>
+                <span class="text-[9px] text-ink/50 uppercase tracking-wider">Audit</span>
+              </div>
+              <p class="text-[10px] text-ink/50 uppercase tracking-wider">7 findings</p>
+              <div class="rounded-md border border-[#f9b380] bg-[#fff7f0] p-2">
+                <p class="text-[9px] font-bold uppercase tracking-wider text-accent-900 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Forbidden claim
+                </p>
+                <p class="mt-1 text-[11px] text-ink leading-snug">
+                  H1 uses <b>"AI-powered"</b> — <em class="font-mono not-italic text-ink/60">brand-vision.md</em> forbids as lead.
+                </p>
+                <p class="mt-1 text-[10px] text-primary bg-primary/5 rounded px-1.5 py-1 leading-snug">
+                  <b>Fix:</b> "Real-time brand analysis."
+                </p>
+              </div>
+              <div class="rounded-md border border-[#f9b380] bg-[#fff7f0] p-2">
+                <p class="text-[9px] font-bold uppercase tracking-wider text-accent-900 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Voice drift
+                </p>
+                <p class="mt-1 text-[11px] text-ink leading-snug">
+                  "seamless, enterprise-grade" — forbidden words.
+                </p>
+              </div>
+              <div class="rounded-md border border-black/5 bg-white p-2">
+                <p class="text-[9px] font-bold uppercase tracking-wider text-[#19683a] flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#2aaa58]"></span>On brand
+                </p>
+                <p class="mt-1 text-[11px] text-ink leading-snug">
+                  CTA aligns with your positioning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Promo 2: Scout showcase (mockup left, text right) -->
+    <div id="scout-promo" class="scroll-mt-24 mt-16 md:mt-20 grid gap-10 md:grid-cols-2 md:gap-14 items-center">
+      <div class="relative order-2 md:order-1">
+        <!-- Browser mockup: Scout side panel -->
+        <div class="rounded-2xl border border-black/10 bg-white shadow-xl overflow-hidden">
+          <div class="flex items-center gap-2 px-3 py-2.5 bg-[#f0eeea] border-b border-black/5">
+            <div class="flex gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#fd6159]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#fdbc2e]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#27c83f]"></span>
+            </div>
+            <div class="flex-1 ml-2 px-3 py-1 rounded-md bg-white border border-black/5 text-xs text-ink/50 font-mono">
+              competitor.com
+            </div>
+          </div>
+          <div class="grid grid-cols-[1fr_220px] min-h-[300px]">
+            <!-- competitor page preview -->
+            <div class="p-5 border-r border-black/5">
+              <span class="inline-block rounded-md px-2 py-0.5 bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-wider">Competitor</span>
+              <h4 class="mt-2 text-lg font-bold text-ink leading-tight">
+                The unified platform for modern brand teams
+              </h4>
+              <p class="mt-2 text-xs text-ink/60 leading-relaxed">
+                Seamlessly integrate your workflow. Enterprise-grade. Trusted by Fortune 500.
+              </p>
+              <div class="mt-4 h-14 rounded-lg bg-gradient-to-br from-paper to-[#ece8e0]"></div>
+              <div class="mt-3 h-2 w-3/5 bg-[#ece8e0] rounded"></div>
+              <div class="mt-2 h-2 w-4/5 bg-[#ece8e0] rounded"></div>
+            </div>
+            <!-- side panel -->
+            <div class="p-3 bg-[#fcfbf9] flex flex-col gap-2">
+              <div class="flex items-center justify-between pb-2 border-b border-black/5">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-4 h-4 rounded bg-gradient-to-br from-primary to-accent grid place-items-center text-white text-[9px] font-serif font-bold">R</span>
+                  <span class="font-serif font-bold text-xs">Reliquery</span>
+                </div>
+                <span class="text-[9px] text-ink/50 uppercase tracking-wider">Scout</span>
+              </div>
+              <p class="text-[10px] text-ink/50 uppercase tracking-wider">Category claim</p>
+              <div class="grid grid-cols-2 gap-1.5">
+                <div class="rounded-md border border-black/5 bg-white p-1.5">
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-ink/50">Them</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">"Unified platform"</p>
+                </div>
+                <div class="rounded-md border border-primary/20 bg-primary/5 p-1.5">
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-primary">You</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">"In-tab analysis"</p>
+                </div>
+              </div>
+              <p class="text-[10px] text-ink/50 uppercase tracking-wider">Voice</p>
+              <div class="grid grid-cols-2 gap-1.5">
+                <div class="rounded-md border border-black/5 bg-white p-1.5">
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-ink/50">Them</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">Corporate, abstract</p>
+                </div>
+                <div class="rounded-md border border-primary/20 bg-primary/5 p-1.5">
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-primary">You</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">Technical, warm</p>
+                </div>
+              </div>
+              <p class="text-[10px] text-ink/50 uppercase tracking-wider">Pricing frame</p>
+              <div class="grid grid-cols-2 gap-1.5">
+                <div class="rounded-md border border-black/5 bg-white p-1.5">
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-ink/50">Them</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">Contact sales</p>
+                </div>
+                <div class="rounded-md border border-primary/20 bg-primary/5 p-1.5">
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-primary">You</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">Free + BYO key</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-1 md:order-2">
+        <p class="text-sm font-semibold text-accent uppercase tracking-wider">Scout · Learn</p>
+        <h3 class="mt-3 text-2xl sm:text-3xl font-bold text-ink leading-tight">
+          Know what they're actually saying.
+        </h3>
+        <p class="mt-4 text-ink/70 leading-relaxed">
+          See the competitor through your own positioning. Scout produces a structured comparison —
+          category claim, voice, pricing frame — side by side with yours. Two minutes, not two hours.
+        </p>
+        <ul class="mt-5 space-y-2 text-sm text-ink/70">
+          <li class="flex gap-2"><span class="text-accent font-bold">—</span> Category, voice, pricing — side by side</li>
+          <li class="flex gap-2"><span class="text-accent font-bold">—</span> Grounded in your own Brand Reliquary</li>
+          <li class="flex gap-2"><span class="text-accent font-bold">—</span> Export as a battle card</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Promo 3: Forge showcase (text left, mockup right) -->
+    <div id="forge-promo" class="scroll-mt-24 mt-16 md:mt-20 grid gap-10 md:grid-cols-2 md:gap-14 items-center">
+      <div>
+        <p class="text-sm font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent uppercase tracking-wider">Forge · Build</p>
+        <h3 class="mt-3 text-2xl sm:text-3xl font-bold text-ink leading-tight">
+          Type the change. See it live.
+        </h3>
+        <p class="mt-4 text-ink/70 leading-relaxed">
+          Describe the design change in plain English. Reliquery generates CSS, applies it
+          to the page in front of you, and lets you revert with one click. No Figma round-trip,
+          no dev cycle.
+        </p>
+        <ul class="mt-5 space-y-2 text-sm text-ink/70">
+          <li class="flex gap-2"><span class="text-accent font-bold">—</span> Runs on your own Anthropic key</li>
+          <li class="flex gap-2"><span class="text-accent font-bold">—</span> See the change before you commit to it</li>
+          <li class="flex gap-2"><span class="text-accent font-bold">—</span> Page and key never leave your browser</li>
+        </ul>
+      </div>
+      <div class="relative">
+        <!-- Browser mockup: Forge side panel -->
+        <div class="rounded-2xl border border-black/10 bg-white shadow-xl overflow-hidden">
+          <div class="flex items-center gap-2 px-3 py-2.5 bg-[#f0eeea] border-b border-black/5">
+            <div class="flex gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#fd6159]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#fdbc2e]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#27c83f]"></span>
+            </div>
+            <div class="flex-1 ml-2 px-3 py-1 rounded-md bg-white border border-black/5 text-xs text-ink/50 font-mono">
+              yourapp.com/landing
+            </div>
+          </div>
+          <div class="grid grid-cols-[1fr_220px] min-h-[300px]">
+            <!-- page preview with live change -->
+            <div class="p-5 border-r border-black/5">
+              <h4 class="text-lg font-bold text-ink leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+                Ship with a second pair of eyes.
+              </h4>
+              <a class="mt-3 inline-block rounded-md bg-accent text-white text-xs font-bold px-3 py-1.5">Install for Chrome</a>
+              <div class="mt-4 h-16 rounded-lg bg-gradient-to-br from-paper to-[#ece8e0]"></div>
+              <div class="mt-3 h-2 w-4/5 bg-[#ece8e0] rounded"></div>
+              <div class="mt-2 h-2 w-3/5 bg-[#ece8e0] rounded"></div>
+            </div>
+            <!-- side panel -->
+            <div class="p-3 bg-[#fcfbf9] flex flex-col gap-2">
+              <div class="flex items-center justify-between pb-2 border-b border-black/5">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-4 h-4 rounded bg-gradient-to-br from-primary to-accent grid place-items-center text-white text-[9px] font-serif font-bold">R</span>
+                  <span class="font-serif font-bold text-xs">Reliquery</span>
+                </div>
+                <span class="text-[9px] text-ink/50 uppercase tracking-wider">Forge</span>
+              </div>
+              <p class="text-[10px] text-ink/50 uppercase tracking-wider">Your prompt</p>
+              <div class="rounded-md border border-black/5 bg-white p-2 font-mono text-[10.5px] leading-snug text-ink">
+                <div class="text-[8.5px] font-sans font-bold uppercase tracking-wider text-primary mb-1">You</div>
+                Make the hero one line. Bump the CTA to orange.
+              </div>
+              <p class="text-[10px] text-ink/50 uppercase tracking-wider">CSS draft · applied live</p>
+              <div class="rounded-md border border-black/5 overflow-hidden font-mono text-[9.5px] leading-relaxed">
+                <div class="px-2 py-0.5 bg-[#fdecec] text-[#9b1c1c]">- .h1 &#123; font-size: 56px; &#125;</div>
+                <div class="px-2 py-0.5 bg-[#eaf7ed] text-[#19683a]">+ .h1 &#123; font-size: 48px;</div>
+                <div class="px-2 py-0.5 bg-[#eaf7ed] text-[#19683a]">+&nbsp;&nbsp;white-space: nowrap; &#125;</div>
+                <div class="px-2 py-0.5 bg-[#fdecec] text-[#9b1c1c]">- .cta &#123; background: #40053f; &#125;</div>
+                <div class="px-2 py-0.5 bg-[#eaf7ed] text-[#19683a]">+ .cta &#123; background: #f26709; &#125;</div>
+              </div>
+              <p class="text-[9px] text-ink/50">BYO key · $0.004 this run</p>
+            </div>
           </div>
         </div>
       </div>
