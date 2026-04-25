@@ -1,0 +1,129 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Support — Reliquery" description="Get help with Reliquery: contact, FAQ, and troubleshooting for the Audit, Scout, and Forge modes.">
+  <article class="mx-auto max-w-3xl px-6 py-16 prose-styles">
+    <h1 class="text-4xl font-bold text-ink">Support</h1>
+    <p class="text-sm text-ink/50 mt-2">We're a small team. We read every email.</p>
+
+    <div class="mt-8 rounded-2xl border border-primary/20 bg-primary/5 p-6">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Contact</p>
+      <p class="mt-2 text-ink/80">
+        Email <a href="mailto:support@reliquery.app" class="text-primary font-semibold underline">support@reliquery.app</a>
+        for bug reports, feature requests, billing questions, or anything else.
+      </p>
+      <p class="mt-3 text-sm text-ink/60">
+        Typical response time: 1–2 business days. For faster triage, include your Chrome version,
+        the page URL you were analyzing, and a screenshot of the issue.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink mt-12">Getting started</h2>
+    <p class="mt-3 text-ink/80">
+      Reliquery lives in the Chrome side panel. Pin the extension and click its icon to open the panel,
+      then choose a mode based on what you're doing:
+    </p>
+
+    <div class="mt-5 grid gap-3">
+      <div class="rounded-xl border border-black/10 bg-white p-4">
+        <p class="text-sm font-bold text-primary uppercase tracking-wider">Audit · Protect</p>
+        <p class="mt-1 text-ink/80 text-sm">
+          On a page on <em>your own</em> site, click <b>Analyze This Page</b>. Reliquery scores brand
+          alignment against your Brand Reliquary documents and lists drift findings with citations.
+        </p>
+      </div>
+      <div class="rounded-xl border border-black/10 bg-white p-4">
+        <p class="text-sm font-bold text-accent uppercase tracking-wider">Scout · Learn</p>
+        <p class="mt-1 text-ink/80 text-sm">
+          On a competitor page, click <b>Analyze This Page</b>. Reliquery returns a side-by-side
+          competitive report with strengths, weaknesses, and an exportable battle card.
+        </p>
+      </div>
+      <div class="rounded-xl border border-black/10 bg-white p-4">
+        <p class="text-sm font-bold uppercase tracking-wider bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Forge · Build</p>
+        <p class="mt-1 text-ink/80 text-sm">
+          Type a design instruction in plain English ("make the hero CTA more prominent"). Reliquery
+          captures a screenshot, asks Claude Opus what to change, and applies the CSS/HTML live to the page.
+          Forge requires your own Anthropic API key.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-ink mt-12">Frequently asked questions</h2>
+
+    <h3 class="text-lg font-semibold text-ink mt-8">Why does Chrome show a "debugging this browser" banner during Forge?</h3>
+    <p class="mt-2 text-ink/80">
+      Forge uses the Chrome DevTools Protocol to capture full-page screenshots and apply CSS/HTML
+      changes live to the page. Whenever Forge is active, Chrome displays its standard debugging
+      banner with a <b>Cancel</b> button so you always know the extension has access.
+      Reliquery never uses the debugger API for monitoring, network interception, or any background activity.
+      The session is detached as soon as you navigate the tab or reset the Forge session.
+    </p>
+
+    <h3 class="text-lg font-semibold text-ink mt-8">How do I set up Forge with my own API key?</h3>
+    <p class="mt-2 text-ink/80">
+      Open the side panel, switch to Forge, and paste your Anthropic API key into the setup field.
+      The key is stored in <code>chrome.storage.local</code> on your machine and is never transmitted
+      to Reliquery. You can get a key at <a href="https://console.anthropic.com" class="text-primary underline">console.anthropic.com</a>.
+      All Forge usage is billed to and visible in your own Anthropic account.
+    </p>
+
+    <h3 class="text-lg font-semibold text-ink mt-8">How do I connect a Brand Reliquary?</h3>
+    <p class="mt-2 text-ink/80">
+      In the side panel settings, choose either a <b>GitHub repository</b> (paste the repo URL plus an
+      optional branch and path; private repos require a personal access token with read-only repo scope)
+      or a <b>local folder</b> via Chrome's File System Access API. Brand documents are read at
+      analysis time, sent with the request, and never persisted server-side.
+    </p>
+
+    <h3 class="text-lg font-semibold text-ink mt-8">Why does Audit refuse to run on sites other than my own?</h3>
+    <p class="mt-2 text-ink/80">
+      Audit is gated to your <b>Home Base</b> domain — the URL you set as your own site. This prevents
+      accidentally auditing a competitor's page against your brand standards. To change your Home Base,
+      open the side panel settings.
+    </p>
+
+    <h3 class="text-lg font-semibold text-ink mt-8">Why does Scout refuse to run on my website?</h3>
+    <p class="mt-2 text-ink/80">
+      Scout is gated <em>away</em> from your Home Base domain — you can't scout your own site against
+      itself. Use Audit for your own pages and Scout for competitors.
+    </p>
+
+    <h3 class="text-lg font-semibold text-ink mt-8">Where is my data stored?</h3>
+    <p class="mt-2 text-ink/80">
+      All settings (Brand Reliquary URL, Home Base, API keys) are stored locally in your browser via
+      Chrome's storage API. Page content and brand documents are sent to Reliquery's backend per request
+      and discarded after the response. See the
+      <a href="/privacy" class="text-primary underline">privacy policy</a> for the full breakdown.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink mt-12">Reporting a bug</h2>
+    <p class="mt-3 text-ink/80">
+      Email <a href="mailto:support@reliquery.app" class="text-primary underline">support@reliquery.app</a>
+      with as much of the following as you can:
+    </p>
+    <ul class="mt-3 text-ink/80 list-disc pl-6 space-y-1">
+      <li>Reliquery extension version (visible in <code>chrome://extensions</code> → Reliquery)</li>
+      <li>Chrome version and operating system</li>
+      <li>The mode you were using (Audit, Scout, or Forge)</li>
+      <li>The URL of the page you were analyzing (if not confidential)</li>
+      <li>A screenshot of the side panel showing the error</li>
+      <li>The exact error message, if any</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-ink mt-12">Account and billing</h2>
+    <p class="mt-3 text-ink/80">
+      For account changes, refunds, plan changes, or billing questions, email
+      <a href="mailto:support@reliquery.app" class="text-primary underline">support@reliquery.app</a>.
+      We do not currently offer a self-service billing portal — every account change is handled by hand
+      so we can confirm it's the right call for you.
+    </p>
+
+    <h2 class="text-2xl font-bold text-ink mt-12">Other</h2>
+    <ul class="mt-3 text-ink/80 list-disc pl-6 space-y-1">
+      <li><a href="/privacy" class="text-primary underline">Privacy policy</a></li>
+      <li><a href="/terms" class="text-primary underline">Terms of service</a></li>
+      <li>Operated by Paladinmusic Enterprises, LLC</li>
+    </ul>
+  </article>
+</Base>
