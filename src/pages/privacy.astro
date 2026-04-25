@@ -106,7 +106,7 @@ import Base from "../layouts/Base.astro";
         <tr class="border-b border-black/5"><td class="py-2 pr-4 font-mono text-xs">storage</td><td class="py-2">Save your Brand Reliquary settings, Home Base URL, and Forge API key locally</td></tr>
         <tr class="border-b border-black/5"><td class="py-2 pr-4 font-mono text-xs">sidePanel</td><td class="py-2">Display the Reliquery interface as a side panel</td></tr>
         <tr class="border-b border-black/5"><td class="py-2 pr-4 font-mono text-xs">debugger</td><td class="py-2">Capture full-page screenshots and apply CSS during Forge mode</td></tr>
-        <tr><td class="py-2 pr-4 font-mono text-xs">host_permissions</td><td class="py-2">Required because users analyze arbitrary webpages of their choice</td></tr>
+        <tr><td class="py-2 pr-4 font-mono text-xs">host_permissions</td><td class="py-2">Allow the extension to send requests to the Reliquery backend only; access to user-visited pages is covered by activeTab, not this permission</td></tr>
       </tbody>
     </table>
 
