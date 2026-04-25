@@ -4,7 +4,7 @@ import Base from "../layouts/Base.astro";
 <Base title="Privacy Policy — Reliquery" description="How Reliquery handles your data.">
   <article class="mx-auto max-w-3xl px-6 py-16 prose-styles">
     <h1 class="text-4xl font-bold text-ink">Privacy Policy</h1>
-    <p class="text-sm text-ink/50 mt-2">Last updated: April 17, 2026</p>
+    <p class="text-sm text-ink/50 mt-2">Last updated: April 24, 2026</p>
 
     <p class="mt-8 text-ink/80 leading-relaxed">
       Reliquery is a Chrome browser extension that helps brand owners, marketers, and product teams
@@ -32,7 +32,11 @@ import Base from "../layouts/Base.astro";
       Reliquery does not store, log, or train on your brand documents.
     </p>
 
-    <h3 class="text-lg font-semibold text-ink mt-6">2.3 Configuration (stored locally only)</h3>
+    <h3 class="text-lg font-semibold text-ink mt-6">2.3 Configuration (stored on your device)</h3>
+    <p class="mt-2 text-ink/80">
+      The following settings are stored in your own browser via Chrome's storage API.
+      They are not transmitted to Reliquery servers from storage:
+    </p>
     <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
       <li>Brand Reliquary repository URL, branch, and path (in <code>chrome.storage.local</code>)</li>
       <li>Home Base URL (in <code>chrome.storage.local</code>)</li>
@@ -40,11 +44,31 @@ import Base from "../layouts/Base.astro";
       <li>GitHub access token for private Reliquary repositories (in <code>chrome.storage.session</code>, cleared when you close the browser)</li>
     </ul>
 
-    <h3 class="text-lg font-semibold text-ink mt-6">2.4 Forge data flow (BYO API key)</h3>
+    <h3 class="text-lg font-semibold text-ink mt-6">2.4 How credentials are transmitted during use</h3>
     <p class="mt-2 text-ink/80">
-      Forge mode uses your personal Anthropic API key. Screenshots and DOM data captured for Forge
-      pass through the Reliquery backend as a proxy directly to Anthropic. Reliquery does not retain
-      these payloads. All inference activity is billed to and visible in your own Anthropic account.
+      When you actively use a feature that requires one of your stored credentials, that credential
+      is transmitted to the relevant service over HTTPS to authenticate the request:
+    </p>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>
+        <strong>Anthropic API key (Forge mode):</strong> Each Forge request is sent from the extension
+        to the Reliquery backend, which forwards the request to Anthropic's API with your key included
+        in the <code>Authorization</code> header. Reliquery's backend acts as a pass-through proxy and
+        does not retain the key, the screenshot, or the DOM payload after the response is returned.
+      </li>
+      <li>
+        <strong>GitHub personal access token (Brand Reliquary GitHub mode):</strong> When the extension
+        fetches files from your connected repository, your token is included in the
+        <code>Authorization</code> header of outbound requests to <code>api.github.com</code> and
+        <code>raw.githubusercontent.com</code>. The token is also sent to the Reliquery backend so
+        the backend can fetch brand documents on your behalf during an analysis; Reliquery does not
+        log or persist the token server-side.
+      </li>
+    </ul>
+    <p class="mt-3 text-ink/80">
+      All Forge inference activity is billed to and visible in your own Anthropic account. Revoking
+      either credential at its source (Anthropic or GitHub) immediately disables the corresponding
+      feature.
     </p>
 
     <h3 class="text-lg font-semibold text-ink mt-6">2.5 Anonymous usage telemetry</h3>
