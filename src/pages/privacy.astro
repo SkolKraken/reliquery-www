@@ -24,12 +24,25 @@ import Base from "../layouts/Base.astro";
       backend for analysis and discarded after the response. Reliquery does not persist page content server-side.
     </p>
     <p class="mt-3 text-ink/80">
-      The first time you analyze a given site, Chrome shows its native permission dialog asking
-      whether to allow Reliquery to read and change data on that site. Permission is requested
-      one origin at a time — never as a blanket "all sites" grant — and the answer persists per
-      site until you revoke it from <code>chrome://extensions</code>. Reliquery never requests
-      permission in the background or at install time; only when you explicitly click "Analyze
-      This Page" on a site Reliquery hasn't seen before.
+      Reliquery never requests page-access permission in the background or at install time.
+      You choose when and how to grant it via Chrome's native permission dialog:
+    </p>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>
+        <strong>One-time grant (recommended for power users):</strong> Click "Permit Reliquery
+        to analyze web pages" in the extension's setup panel. Chrome asks once whether to
+        allow Reliquery on all sites. Once granted, no further prompts.
+      </li>
+      <li>
+        <strong>Per-site grant (default):</strong> If you skip the one-time grant, Chrome
+        asks for permission the first time you analyze each new site. Each grant persists
+        per origin.
+      </li>
+    </ul>
+    <p class="mt-3 text-ink/80">
+      All grants — broad or per-site — can be revoked at any time from
+      <code>chrome://extensions</code> → Reliquery → Site access, or from the "Revoke" link in
+      the extension's setup panel.
     </p>
 
     <h3 class="text-lg font-semibold text-ink mt-6">2.2 Brand Reliquary documents</h3>
