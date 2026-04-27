@@ -123,6 +123,7 @@ import Base from "../layouts/Base.astro";
       <thead><tr class="border-b border-black/10"><th class="py-2 pr-4 font-semibold text-ink">Permission</th><th class="py-2 font-semibold text-ink">Purpose</th></tr></thead>
       <tbody class="text-ink/80">
         <tr class="border-b border-black/5"><td class="py-2 pr-4 font-mono text-xs">activeTab</td><td class="py-2">Read the page you click "Analyze This Page" on</td></tr>
+        <tr class="border-b border-black/5"><td class="py-2 pr-4 font-mono text-xs">tabs</td><td class="py-2">Read the URL of the active tab so the side panel knows which site you're about to analyze. This permission grants metadata access only (URL, title, favicon) — it does not allow reading or modifying page content. The "Read your browsing history" warning Chrome shows at install describes this metadata access; Reliquery does not store, log, or transmit your browsing history</td></tr>
         <tr class="border-b border-black/5"><td class="py-2 pr-4 font-mono text-xs">scripting</td><td class="py-2">Inject the content extraction script into the active tab</td></tr>
         <tr class="border-b border-black/5"><td class="py-2 pr-4 font-mono text-xs">storage</td><td class="py-2">Save your Brand Reliquary settings, Home Base URL, and Forge API key locally</td></tr>
         <tr class="border-b border-black/5"><td class="py-2 pr-4 font-mono text-xs">sidePanel</td><td class="py-2">Display the Reliquery interface as a side panel</td></tr>
