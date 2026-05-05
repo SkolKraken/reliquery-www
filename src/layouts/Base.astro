@@ -16,6 +16,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script is:inline>
       // Apply dark mode class before first paint to prevent flash.
       // Reads localStorage, falls back to system preference, defaults to light.
@@ -33,7 +36,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     </div>
     <header class="border-b border-black/5 dark:border-white/10 relative z-30">
       <div class="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-2 font-bold text-lg text-primary">
+        <a href="/" class="flex items-center gap-2 font-display text-xl text-primary">
           <span class="inline-block w-2 h-2 rounded-full bg-accent"></span>
           Reliquery
         </a>
@@ -167,6 +170,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     </script>
 
     <style>
+      /* Apply Instrument Serif to all prose headings (content pages) */
+      .prose-styles h1,
+      .prose-styles h2,
+      .prose-styles h3 {
+        font-family: "Instrument Serif", Georgia, Cambria, serif;
+      }
+
       /* Global dark-mode overrides for article/prose pages so we don't have
          to add dark: variants to hundreds of elements in privacy, terms,
          support, and releases pages. */
