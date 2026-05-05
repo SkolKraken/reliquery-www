@@ -1,0 +1,64 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Release History — Reliquery" description="What's new in each version of Reliquery.">
+  <article class="mx-auto max-w-3xl px-6 py-16 prose-styles">
+    <h1 class="text-4xl font-bold text-ink">Release History</h1>
+    <p class="text-sm text-ink/50 mt-2">A changelog of every Reliquery release.</p>
+
+    <!-- v1.1.0 -->
+    <h2 class="text-2xl font-bold text-ink mt-10">v1.1.0 <span class="text-base font-normal text-ink/50">— May 2026</span></h2>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Account & billing</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>Sign-in required to use the extension (email-based passwordless OTP via Supabase)</li>
+      <li>Free tier (5 analyses) and Pro subscription via Stripe Checkout</li>
+      <li>Usage counter in the new Account & Usage panel shows analyses used against your limit in real time</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">UI overhaul</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>Admin panel split into two purpose-built dropdowns: <strong>Account & Usage</strong> and <strong>Settings</strong></li>
+      <li>Settings reorganized into three distinct cards: Brand Reliquary, Home Base, and Page Access</li>
+      <li>Forge mode "Beta" label upgraded to "Pro"</li>
+      <li>Text contrast improved across all panels and cards for better legibility</li>
+      <li>Usage bar loads instantly and animates smoothly; Upgrade button no longer flickers on open</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Permissions</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>"Revoke" renamed to <strong>"Disable"</strong> for clarity; "What's this?" explanation moved below the grant button</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Backend reliability</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>35-second API timeout prevents hung analyses</li>
+      <li>Brand Reliquary file size capped at 500 KB per file; file count capped at 20 files</li>
+      <li>Concurrent request throttling prevents duplicate analysis charges</li>
+      <li>Input token estimation trims brand context automatically if payload exceeds safe limits</li>
+    </ul>
+
+    <!-- v1.0.1 -->
+    <h2 class="text-2xl font-bold text-ink mt-10">v1.0.1 <span class="text-base font-normal text-ink/50">— April 2026</span></h2>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Permissions overhaul</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>Replaced broad host permissions at install with optional host permissions</li>
+      <li>Users now grant access per site via Chrome's native dialog when they click Analyze, or can grant once for all sites from the Settings panel</li>
+      <li>Permissions can be disabled at any time from the extension settings or from <code>chrome://extensions</code></li>
+    </ul>
+
+    <!-- v1.0 -->
+    <h2 class="text-2xl font-bold text-ink mt-10">v1.0 <span class="text-base font-normal text-ink/50">— April 2026</span></h2>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Initial release</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li><strong>Audit mode</strong> — analyze any webpage against your Brand Reliquary for brand alignment, tone, and positioning</li>
+      <li><strong>Scout mode</strong> — analyze a competitor's page for strategic insights</li>
+      <li><strong>Forge mode</strong> — chat-based design iteration with full-page screenshots and your own Anthropic API key</li>
+      <li><strong>Brand Reliquary</strong> — connect a GitHub repository or local folder of brand documents to ground every analysis</li>
+      <li><strong>Home Base</strong> — set your domain so Reliquery knows your site from competitors</li>
+      <li>Domain mismatch warnings suggest the right mode when Audit is used on a competitor or Scout on your own site</li>
+    </ul>
+  </article>
+</Base>

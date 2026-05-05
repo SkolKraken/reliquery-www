@@ -18,6 +18,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body class="bg-paper text-ink antialiased">
+    <div class="w-full text-center py-2.5 px-4 text-sm font-medium text-white" style="background: linear-gradient(135deg, #40053f, #f26709);">
+      See how brands audit, scout, and forge — <a href="https://www.youtube.com/watch?v=CqTZEanUzcY" target="_blank" rel="noopener noreferrer" class="underline font-semibold hover:opacity-80 transition">Watch the trailer &rarr;</a>
+    </div>
     <header class="border-b border-black/5 relative z-30">
       <div class="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 font-bold text-lg text-primary">
@@ -132,6 +135,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           <a href="/support" class="hover:text-primary transition">Support</a>
           <a href="/privacy" class="hover:text-primary transition">Privacy</a>
           <a href="/terms" class="hover:text-primary transition">Terms</a>
+          <a href="/releases" class="hover:text-primary transition">Releases</a>
           <a href="mailto:support@reliquery.app" class="hover:text-primary transition">Contact</a>
         </div>
       </div>
