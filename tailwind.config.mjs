@@ -27,9 +27,8 @@ export default {
         "surface-dark": "#1e1b24",
       },
       fontFamily: {
-        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
-        serif: ["Instrument Serif", "Georgia", "Cambria", "serif"],
-        display: ["Instrument Serif", "Georgia", "Cambria", "serif"],
+        sans: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        serif: ["Georgia", "Cambria", "serif"],
       },
     },
   },
