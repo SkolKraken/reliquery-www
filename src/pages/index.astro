@@ -84,8 +84,15 @@ import { Icon } from "astro-icon/components";
 
   <!-- Brand Reliquary explainer (moved above the promos) -->
   <section class="mx-auto max-w-6xl px-6 py-16">
-    <div class="rounded-3xl bg-primary text-white p-10 md:p-14">
-      <div class="max-w-3xl">
+    <div class="stained-glass rounded-3xl bg-primary text-white p-10 md:p-14 relative overflow-hidden">
+      <!-- Octagonal grid pattern (the "leading") -->
+      <div class="stained-grid"></div>
+      <!-- Color variation blobs (stained glass tints) -->
+      <div class="stained-colors"></div>
+      <!-- Frosted glass sheen -->
+      <div class="stained-frost"></div>
+
+      <div class="max-w-3xl relative z-10">
         <p class="text-accent text-xs font-bold uppercase tracking-widest">The Brand Reliquary</p>
         <h2 class="mt-3 text-3xl md:text-4xl font-bold">Your brand isn't a vibe. It's a pact.</h2>
         <p class="mt-5 text-white/80 leading-relaxed text-lg">
@@ -426,3 +433,41 @@ import { Icon } from "astro-icon/components";
     </a>
   </section>
 </Base>
+
+<style>
+  /* Stained glass effect for the Brand Reliquary section.
+     Layers: octagonal grid → color blobs → frosted sheen → content */
+
+  .stained-grid {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpolygon points='23,0 57,0 80,23 80,57 57,80 23,80 0,57 0,23' fill='rgba(255,255,255,0.03)' stroke='rgba(255,255,255,0.12)' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 80px 80px;
+  }
+
+  .stained-colors {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 8% 15%, rgba(242,103,9,0.22) 0%, transparent 35%),
+      radial-gradient(ellipse at 92% 10%, rgba(236,217,235,0.12) 0%, transparent 30%),
+      radial-gradient(ellipse at 78% 85%, rgba(242,103,9,0.16) 0%, transparent 35%),
+      radial-gradient(ellipse at 25% 90%, rgba(161,65,4,0.18) 0%, transparent 30%),
+      radial-gradient(ellipse at 55% 45%, rgba(122,28,120,0.2) 0%, transparent 45%),
+      radial-gradient(ellipse at 40% 20%, rgba(248,241,248,0.06) 0%, transparent 25%);
+  }
+
+  .stained-frost {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255,255,255,0.08) 0%,
+      transparent 25%,
+      rgba(255,255,255,0.03) 50%,
+      transparent 75%,
+      rgba(255,255,255,0.06) 100%
+    );
+    backdrop-filter: blur(0.5px);
+  }
+</style>
