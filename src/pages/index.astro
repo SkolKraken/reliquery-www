@@ -5,22 +5,22 @@ import { Icon } from "astro-icon/components";
 <Base>
   <!-- Hero -->
   <section class="mx-auto max-w-6xl px-6 pt-20 pb-16 text-center">
-    <p class="inline-block rounded-full bg-primary/5 text-primary text-xs font-semibold uppercase tracking-wider px-3 py-1">
+    <p class="inline-block rounded-full bg-primary/5 dark:bg-primary/20 text-primary dark:text-primary-100 text-xs font-semibold uppercase tracking-wider px-3 py-1">
       Chrome extension · v1.0
     </p>
-    <h1 class="mt-6 text-5xl sm:text-6xl font-bold tracking-tight text-ink leading-[1.05]">
+    <h1 class="mt-6 text-5xl sm:text-6xl font-bold tracking-tight text-ink dark:text-ink-dark leading-[1.05]">
       Remember what matters, <br />
-      <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">when it matters.</span>
+      <span class="bg-gradient-to-r from-primary dark:from-primary-100 to-accent bg-clip-text text-transparent">when it matters.</span>
     </h1>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
       <a href="#" class="rounded-lg bg-primary px-6 py-3 text-white font-semibold hover:opacity-90 transition">
         Add to Chrome — Free
       </a>
-      <a href="#how" class="rounded-lg px-6 py-3 text-ink/70 font-semibold hover:text-primary transition">
+      <a href="#how" class="rounded-lg px-6 py-3 text-ink/70 dark:text-ink-dark/70 font-semibold hover:text-primary transition">
         See how it works →
       </a>
     </div>
-    <p class="mt-4 text-xs text-ink/50">
+    <p class="mt-4 text-xs text-ink/50 dark:text-ink-dark/50">
       Free during beta · No credit card · Paid tiers coming after launch
     </p>
   </section>
@@ -28,38 +28,38 @@ import { Icon } from "astro-icon/components";
   <!-- Three modes -->
   <section id="how" class="mx-auto max-w-6xl px-6 py-16">
     <div class="text-center mb-14">
-      <h2 class="text-3xl sm:text-4xl font-bold text-ink leading-tight">
+      <h2 class="text-3xl sm:text-4xl font-bold text-ink dark:text-ink-dark leading-tight">
         Audit your site. Scout the competition. <br class="hidden sm:block" />
         Forge what's next — without leaving the tab.
       </h2>
-      <p class="mt-5 text-ink/60 max-w-xl mx-auto text-lg italic">
+      <p class="mt-5 text-ink/60 dark:text-ink-dark/60 max-w-xl mx-auto text-lg italic">
         You may not be a wizard in a tower, but Reliquery will make you look like one.
       </p>
     </div>
 
     <div class="grid gap-6 md:grid-cols-3">
       <!-- Audit -->
-      <a href="#audit-promo" class="group rounded-2xl border border-black/5 bg-white p-7 block hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5 transition">
-        <div class="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+      <a href="#audit-promo" class="group rounded-2xl border border-black/5 dark:border-white/10 bg-white dark:bg-surface-dark p-7 block hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5 transition">
+        <div class="w-11 h-11 rounded-lg bg-primary/10 text-primary dark:text-primary-100 flex items-center justify-center">
           <Icon name="lucide:shield-check" class="w-6 h-6" />
         </div>
-        <h3 class="mt-5 text-xl font-bold text-ink">Audit</h3>
-        <p class="mt-1 text-sm font-semibold text-primary uppercase tracking-wider">Protect</p>
-        <p class="mt-3 text-sm text-ink/70 leading-relaxed">
+        <h3 class="mt-5 text-xl font-bold text-ink dark:text-ink-dark">Audit</h3>
+        <p class="mt-1 text-sm font-semibold text-primary dark:text-primary-100 uppercase tracking-wider">Protect</p>
+        <p class="mt-3 text-sm text-ink/70 dark:text-ink-dark/70 leading-relaxed">
           Score any page on your site against your own brand documents.
           Every drift finding cites the exact passage it violates.
         </p>
-        <p class="mt-4 text-xs font-semibold text-primary opacity-0 group-hover:opacity-100 transition">See it in action ↓</p>
+        <p class="mt-4 text-xs font-semibold text-primary dark:text-primary-100 opacity-0 group-hover:opacity-100 transition">See it in action ↓</p>
       </a>
 
       <!-- Scout -->
-      <a href="#scout-promo" class="group rounded-2xl border border-black/5 bg-white p-7 block hover:border-accent/30 hover:shadow-lg hover:-translate-y-0.5 transition">
+      <a href="#scout-promo" class="group rounded-2xl border border-black/5 dark:border-white/10 bg-white dark:bg-surface-dark p-7 block hover:border-accent/30 hover:shadow-lg hover:-translate-y-0.5 transition">
         <div class="w-11 h-11 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
           <Icon name="lucide:swords" class="w-6 h-6" />
         </div>
-        <h3 class="mt-5 text-xl font-bold text-ink">Scout</h3>
+        <h3 class="mt-5 text-xl font-bold text-ink dark:text-ink-dark">Scout</h3>
         <p class="mt-1 text-sm font-semibold text-accent uppercase tracking-wider">Learn</p>
-        <p class="mt-3 text-sm text-ink/70 leading-relaxed">
+        <p class="mt-3 text-sm text-ink/70 dark:text-ink-dark/70 leading-relaxed">
           Side-by-side competitive intelligence. Where they're stronger,
           where they're weak, what to do about it. Export a battle card.
         </p>
@@ -67,13 +67,13 @@ import { Icon } from "astro-icon/components";
       </a>
 
       <!-- Forge -->
-      <a href="#forge-promo" class="group rounded-2xl border border-black/5 bg-white p-7 block hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5 transition">
+      <a href="#forge-promo" class="group rounded-2xl border border-black/5 dark:border-white/10 bg-white dark:bg-surface-dark p-7 block hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5 transition">
         <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-primary to-accent text-white flex items-center justify-center">
           <Icon name="lucide:anvil" class="w-6 h-6" />
         </div>
-        <h3 class="mt-5 text-xl font-bold text-ink">Forge</h3>
+        <h3 class="mt-5 text-xl font-bold text-ink dark:text-ink-dark">Forge</h3>
         <p class="mt-1 text-sm font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent uppercase tracking-wider">Build</p>
-        <p class="mt-3 text-sm text-ink/70 leading-relaxed">
+        <p class="mt-3 text-sm text-ink/70 dark:text-ink-dark/70 leading-relaxed">
           Type a design instruction in plain English. Reliquery applies the
           CSS and HTML changes live to the page using Claude Opus.
         </p>
@@ -115,8 +115,8 @@ import { Icon } from "astro-icon/components";
   <!-- In-depth product showcases (three promos: Audit → Scout → Forge) -->
   <section id="promos" class="mx-auto max-w-6xl px-6 py-16">
     <div class="text-center mb-14">
-      <p class="text-xs font-semibold text-ink/50 uppercase tracking-widest">See it in action</p>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-ink leading-tight">
+      <p class="text-xs font-semibold text-ink/50 dark:text-ink-dark/50 uppercase tracking-widest">See it in action</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-ink dark:text-ink-dark leading-tight">
         Three modes. One side panel.
       </h2>
     </div>
@@ -125,81 +125,81 @@ import { Icon } from "astro-icon/components";
     <div id="audit-promo" class="scroll-mt-24 grid gap-10 md:grid-cols-2 md:gap-14 items-center">
       <div>
         <p class="text-sm font-semibold text-primary uppercase tracking-wider">Audit · Protect</p>
-        <h3 class="mt-3 text-2xl sm:text-3xl font-bold text-ink leading-tight">
+        <h3 class="mt-3 text-2xl sm:text-3xl font-bold text-ink dark:text-ink-dark leading-tight">
           Catch drift before it ships.
         </h3>
-        <p class="mt-4 text-ink/70 leading-relaxed">
+        <p class="mt-4 text-ink/70 dark:text-ink-dark/70 leading-relaxed">
           Score any page against your Brand Reliquary. Reliquery surfaces voice drift,
           forbidden claims, and off-message copy — each finding cites the exact passage it
           violates and proposes a rewrite you can ship.
         </p>
-        <ul class="mt-5 space-y-2 text-sm text-ink/70">
-          <li class="flex gap-2"><span class="text-primary font-bold">—</span> Citations back to your own brand docs</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">—</span> Proposed rewrite with every finding</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">—</span> Runs on any tab, in under a minute</li>
+        <ul class="mt-5 space-y-2 text-sm text-ink/70 dark:text-ink-dark/70">
+          <li class="flex gap-2"><span class="text-primary dark:text-primary-100 font-bold">—</span> Citations back to your own brand docs</li>
+          <li class="flex gap-2"><span class="text-primary dark:text-primary-100 font-bold">—</span> Proposed rewrite with every finding</li>
+          <li class="flex gap-2"><span class="text-primary dark:text-primary-100 font-bold">—</span> Runs on any tab, in under a minute</li>
         </ul>
       </div>
       <div class="relative">
         <!-- Browser mockup: Audit side panel -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-xl overflow-hidden">
-          <div class="flex items-center gap-2 px-3 py-2.5 bg-[#f0eeea] border-b border-black/5">
+        <div class="rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-surface-dark shadow-xl overflow-hidden">
+          <div class="flex items-center gap-2 px-3 py-2.5 bg-[#f0eeea] dark:bg-[#2a2730] border-b border-black/5 dark:border-white/10">
             <div class="flex gap-1.5">
               <span class="w-2.5 h-2.5 rounded-full bg-[#fd6159]"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#fdbc2e]"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#27c83f]"></span>
             </div>
-            <div class="flex-1 ml-2 px-3 py-1 rounded-md bg-white border border-black/5 text-xs text-ink/50 font-mono">
+            <div class="flex-1 ml-2 px-3 py-1 rounded-md bg-white dark:bg-white/10 border border-black/5 dark:border-white/10 text-xs text-ink/50 dark:text-ink-dark/50 font-mono">
               reliquery.app
             </div>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_220px] sm:min-h-[300px]">
             <!-- page preview -->
-            <div class="p-5 border-b sm:border-b-0 sm:border-r border-black/5">
-              <div class="inline-block rounded-md px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Hero H1</div>
-              <h4 class="mt-2 text-lg font-bold text-ink leading-tight outline-2 outline-dashed outline-accent outline-offset-4 rounded-sm">
+            <div class="p-5 border-b sm:border-b-0 sm:border-r border-black/5 dark:border-white/10">
+              <div class="inline-block rounded-md px-2 py-0.5 bg-primary/10 text-primary dark:text-primary-100 text-[10px] font-bold uppercase tracking-wider">Hero H1</div>
+              <h4 class="mt-2 text-lg font-bold text-ink dark:text-ink-dark leading-tight outline-2 outline-dashed outline-accent outline-offset-4 rounded-sm">
                 AI-powered workflow analysis
               </h4>
-              <p class="mt-3 text-xs text-ink/60 leading-relaxed">
+              <p class="mt-3 text-xs text-ink/60 dark:text-ink-dark/60 leading-relaxed">
                 Unlock seamless, enterprise-grade insights with our revolutionary platform.
               </p>
-              <div class="mt-4 h-16 rounded-lg bg-gradient-to-br from-paper to-[#ece8e0]"></div>
-              <div class="mt-3 h-2 w-4/5 bg-[#ece8e0] rounded"></div>
-              <div class="mt-2 h-2 w-2/3 bg-[#ece8e0] rounded"></div>
+              <div class="mt-4 h-16 rounded-lg bg-gradient-to-br from-paper dark:from-surface-dark to-[#ece8e0] dark:to-[#2a2730]"></div>
+              <div class="mt-3 h-2 w-4/5 bg-[#ece8e0] dark:bg-white/10 rounded"></div>
+              <div class="mt-2 h-2 w-2/3 bg-[#ece8e0] dark:bg-white/10 rounded"></div>
             </div>
             <!-- side panel -->
-            <div class="p-3 bg-[#fcfbf9] flex flex-col gap-2">
-              <div class="flex items-center justify-between pb-2 border-b border-black/5">
+            <div class="p-3 bg-[#fcfbf9] dark:bg-[#1a1720] flex flex-col gap-2">
+              <div class="flex items-center justify-between pb-2 border-b border-black/5 dark:border-white/10">
                 <div class="flex items-center gap-1.5">
                   <span class="w-4 h-4 rounded bg-gradient-to-br from-primary to-accent grid place-items-center text-white text-[9px] font-serif font-bold">R</span>
                   <span class="font-serif font-bold text-xs">Reliquery</span>
                 </div>
-                <span class="text-[9px] text-ink/50 uppercase tracking-wider">Audit</span>
+                <span class="text-[9px] text-ink/50 dark:text-ink-dark/50 uppercase tracking-wider">Audit</span>
               </div>
-              <p class="text-[10px] text-ink/50 uppercase tracking-wider">7 findings</p>
-              <div class="rounded-md border border-[#f9b380] bg-[#fff7f0] p-2">
-                <p class="text-[9px] font-bold uppercase tracking-wider text-accent-900 flex items-center gap-1">
+              <p class="text-[10px] text-ink/50 dark:text-ink-dark/50 uppercase tracking-wider">7 findings</p>
+              <div class="rounded-md border border-[#f9b380] dark:border-accent/30 bg-[#fff7f0] dark:bg-accent/10 p-2">
+                <p class="text-[9px] font-bold uppercase tracking-wider text-accent-900 dark:text-accent flex items-center gap-1">
                   <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Forbidden claim
                 </p>
-                <p class="mt-1 text-[11px] text-ink leading-snug">
-                  H1 uses <b>"AI-powered"</b> — <em class="font-mono not-italic text-ink/60">brand-vision.md</em> forbids as lead.
+                <p class="mt-1 text-[11px] text-ink dark:text-ink-dark leading-snug">
+                  H1 uses <b>"AI-powered"</b> — <em class="font-mono not-italic text-ink/60 dark:text-ink-dark/60">brand-vision.md</em> forbids as lead.
                 </p>
-                <p class="mt-1 text-[10px] text-primary bg-primary/5 rounded px-1.5 py-1 leading-snug">
+                <p class="mt-1 text-[10px] text-primary dark:text-primary-100 bg-primary/5 rounded px-1.5 py-1 leading-snug">
                   <b>Fix:</b> "Real-time brand analysis."
                 </p>
               </div>
-              <div class="rounded-md border border-[#f9b380] bg-[#fff7f0] p-2">
-                <p class="text-[9px] font-bold uppercase tracking-wider text-accent-900 flex items-center gap-1">
+              <div class="rounded-md border border-[#f9b380] dark:border-accent/30 bg-[#fff7f0] dark:bg-accent/10 p-2">
+                <p class="text-[9px] font-bold uppercase tracking-wider text-accent-900 dark:text-accent flex items-center gap-1">
                   <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Voice drift
                 </p>
-                <p class="mt-1 text-[11px] text-ink leading-snug">
+                <p class="mt-1 text-[11px] text-ink dark:text-ink-dark leading-snug">
                   "seamless, enterprise-grade" — forbidden words.
                 </p>
               </div>
-              <div class="rounded-md border border-black/5 bg-white p-2">
-                <p class="text-[9px] font-bold uppercase tracking-wider text-[#19683a] flex items-center gap-1">
+              <div class="rounded-md border border-black/5 dark:border-white/10 bg-white dark:bg-surface-dark p-2">
+                <p class="text-[9px] font-bold uppercase tracking-wider text-[#19683a] dark:text-[#4ade80] flex items-center gap-1">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#2aaa58]"></span>On brand
                 </p>
-                <p class="mt-1 text-[11px] text-ink leading-snug">
+                <p class="mt-1 text-[11px] text-ink dark:text-ink-dark leading-snug">
                   CTA aligns with your positioning.
                 </p>
               </div>
@@ -213,71 +213,71 @@ import { Icon } from "astro-icon/components";
     <div id="scout-promo" class="scroll-mt-24 mt-16 md:mt-20 grid gap-10 md:grid-cols-2 md:gap-14 items-center">
       <div class="relative order-2 md:order-1">
         <!-- Browser mockup: Scout side panel -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-xl overflow-hidden">
-          <div class="flex items-center gap-2 px-3 py-2.5 bg-[#f0eeea] border-b border-black/5">
+        <div class="rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-surface-dark shadow-xl overflow-hidden">
+          <div class="flex items-center gap-2 px-3 py-2.5 bg-[#f0eeea] dark:bg-[#2a2730] border-b border-black/5 dark:border-white/10">
             <div class="flex gap-1.5">
               <span class="w-2.5 h-2.5 rounded-full bg-[#fd6159]"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#fdbc2e]"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#27c83f]"></span>
             </div>
-            <div class="flex-1 ml-2 px-3 py-1 rounded-md bg-white border border-black/5 text-xs text-ink/50 font-mono">
+            <div class="flex-1 ml-2 px-3 py-1 rounded-md bg-white dark:bg-white/10 border border-black/5 dark:border-white/10 text-xs text-ink/50 dark:text-ink-dark/50 font-mono">
               competitor.com
             </div>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_220px] sm:min-h-[300px]">
             <!-- competitor page preview -->
-            <div class="p-5 border-b sm:border-b-0 sm:border-r border-black/5">
+            <div class="p-5 border-b sm:border-b-0 sm:border-r border-black/5 dark:border-white/10">
               <span class="inline-block rounded-md px-2 py-0.5 bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-wider">Competitor</span>
-              <h4 class="mt-2 text-lg font-bold text-ink leading-tight">
+              <h4 class="mt-2 text-lg font-bold text-ink dark:text-ink-dark leading-tight">
                 The unified platform for modern brand teams
               </h4>
-              <p class="mt-2 text-xs text-ink/60 leading-relaxed">
+              <p class="mt-2 text-xs text-ink/60 dark:text-ink-dark/60 leading-relaxed">
                 Seamlessly integrate your workflow. Enterprise-grade. Trusted by Fortune 500.
               </p>
-              <div class="mt-4 h-14 rounded-lg bg-gradient-to-br from-paper to-[#ece8e0]"></div>
-              <div class="mt-3 h-2 w-3/5 bg-[#ece8e0] rounded"></div>
-              <div class="mt-2 h-2 w-4/5 bg-[#ece8e0] rounded"></div>
+              <div class="mt-4 h-14 rounded-lg bg-gradient-to-br from-paper dark:from-surface-dark to-[#ece8e0] dark:to-[#2a2730]"></div>
+              <div class="mt-3 h-2 w-3/5 bg-[#ece8e0] dark:bg-white/10 rounded"></div>
+              <div class="mt-2 h-2 w-4/5 bg-[#ece8e0] dark:bg-white/10 rounded"></div>
             </div>
             <!-- side panel -->
-            <div class="p-3 bg-[#fcfbf9] flex flex-col gap-2">
-              <div class="flex items-center justify-between pb-2 border-b border-black/5">
+            <div class="p-3 bg-[#fcfbf9] dark:bg-[#1a1720] flex flex-col gap-2">
+              <div class="flex items-center justify-between pb-2 border-b border-black/5 dark:border-white/10">
                 <div class="flex items-center gap-1.5">
                   <span class="w-4 h-4 rounded bg-gradient-to-br from-primary to-accent grid place-items-center text-white text-[9px] font-serif font-bold">R</span>
                   <span class="font-serif font-bold text-xs">Reliquery</span>
                 </div>
-                <span class="text-[9px] text-ink/50 uppercase tracking-wider">Scout</span>
+                <span class="text-[9px] text-ink/50 dark:text-ink-dark/50 uppercase tracking-wider">Scout</span>
               </div>
-              <p class="text-[10px] text-ink/50 uppercase tracking-wider">Category claim</p>
+              <p class="text-[10px] text-ink/50 dark:text-ink-dark/50 uppercase tracking-wider">Category claim</p>
               <div class="grid grid-cols-2 gap-1.5">
-                <div class="rounded-md border border-black/5 bg-white p-1.5">
-                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-ink/50">Them</p>
-                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">"Unified platform"</p>
+                <div class="rounded-md border border-black/5 dark:border-white/10 bg-white dark:bg-surface-dark p-1.5">
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-ink/50 dark:text-ink-dark/50">Them</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink dark:text-ink-dark leading-snug">"Unified platform"</p>
                 </div>
                 <div class="rounded-md border border-primary/20 bg-primary/5 p-1.5">
-                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-primary">You</p>
-                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">"In-tab analysis"</p>
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-primary dark:text-primary-100">You</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink dark:text-ink-dark leading-snug">"In-tab analysis"</p>
                 </div>
               </div>
-              <p class="text-[10px] text-ink/50 uppercase tracking-wider">Voice</p>
+              <p class="text-[10px] text-ink/50 dark:text-ink-dark/50 uppercase tracking-wider">Voice</p>
               <div class="grid grid-cols-2 gap-1.5">
-                <div class="rounded-md border border-black/5 bg-white p-1.5">
-                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-ink/50">Them</p>
-                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">Corporate, abstract</p>
+                <div class="rounded-md border border-black/5 dark:border-white/10 bg-white dark:bg-surface-dark p-1.5">
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-ink/50 dark:text-ink-dark/50">Them</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink dark:text-ink-dark leading-snug">Corporate, abstract</p>
                 </div>
                 <div class="rounded-md border border-primary/20 bg-primary/5 p-1.5">
-                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-primary">You</p>
-                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">Technical, warm</p>
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-primary dark:text-primary-100">You</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink dark:text-ink-dark leading-snug">Technical, warm</p>
                 </div>
               </div>
-              <p class="text-[10px] text-ink/50 uppercase tracking-wider">Pricing frame</p>
+              <p class="text-[10px] text-ink/50 dark:text-ink-dark/50 uppercase tracking-wider">Pricing frame</p>
               <div class="grid grid-cols-2 gap-1.5">
-                <div class="rounded-md border border-black/5 bg-white p-1.5">
-                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-ink/50">Them</p>
-                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">Contact sales</p>
+                <div class="rounded-md border border-black/5 dark:border-white/10 bg-white dark:bg-surface-dark p-1.5">
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-ink/50 dark:text-ink-dark/50">Them</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink dark:text-ink-dark leading-snug">Contact sales</p>
                 </div>
                 <div class="rounded-md border border-primary/20 bg-primary/5 p-1.5">
-                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-primary">You</p>
-                  <p class="mt-0.5 text-[10.5px] text-ink leading-snug">Free + BYO key</p>
+                  <p class="text-[8.5px] font-bold uppercase tracking-wider text-primary dark:text-primary-100">You</p>
+                  <p class="mt-0.5 text-[10.5px] text-ink dark:text-ink-dark leading-snug">Free + BYO key</p>
                 </div>
               </div>
             </div>
@@ -286,14 +286,14 @@ import { Icon } from "astro-icon/components";
       </div>
       <div class="order-1 md:order-2">
         <p class="text-sm font-semibold text-accent uppercase tracking-wider">Scout · Learn</p>
-        <h3 class="mt-3 text-2xl sm:text-3xl font-bold text-ink leading-tight">
+        <h3 class="mt-3 text-2xl sm:text-3xl font-bold text-ink dark:text-ink-dark leading-tight">
           Know what they're actually saying.
         </h3>
-        <p class="mt-4 text-ink/70 leading-relaxed">
+        <p class="mt-4 text-ink/70 dark:text-ink-dark/70 leading-relaxed">
           See the competitor through your own positioning. Scout produces a structured comparison —
           category claim, voice, pricing frame — side by side with yours. Two minutes, not two hours.
         </p>
-        <ul class="mt-5 space-y-2 text-sm text-ink/70">
+        <ul class="mt-5 space-y-2 text-sm text-ink/70 dark:text-ink-dark/70">
           <li class="flex gap-2"><span class="text-accent font-bold">—</span> Category, voice, pricing — side by side</li>
           <li class="flex gap-2"><span class="text-accent font-bold">—</span> Grounded in your own Brand Reliquary</li>
           <li class="flex gap-2"><span class="text-accent font-bold">—</span> Export as a battle card</li>
@@ -305,15 +305,15 @@ import { Icon } from "astro-icon/components";
     <div id="forge-promo" class="scroll-mt-24 mt-16 md:mt-20 grid gap-10 md:grid-cols-2 md:gap-14 items-center">
       <div>
         <p class="text-sm font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent uppercase tracking-wider">Forge · Build</p>
-        <h3 class="mt-3 text-2xl sm:text-3xl font-bold text-ink leading-tight">
+        <h3 class="mt-3 text-2xl sm:text-3xl font-bold text-ink dark:text-ink-dark leading-tight">
           Type the change. See it live.
         </h3>
-        <p class="mt-4 text-ink/70 leading-relaxed">
+        <p class="mt-4 text-ink/70 dark:text-ink-dark/70 leading-relaxed">
           Describe the design change in plain English. Reliquery generates CSS, applies it
           to the page in front of you, and lets you revert with one click. No Figma round-trip,
           no dev cycle.
         </p>
-        <ul class="mt-5 space-y-2 text-sm text-ink/70">
+        <ul class="mt-5 space-y-2 text-sm text-ink/70 dark:text-ink-dark/70">
           <li class="flex gap-2"><span class="text-accent font-bold">—</span> Runs on your own Anthropic key</li>
           <li class="flex gap-2"><span class="text-accent font-bold">—</span> See the change before you commit to it</li>
           <li class="flex gap-2"><span class="text-accent font-bold">—</span> Page and key never leave your browser</li>
@@ -321,51 +321,51 @@ import { Icon } from "astro-icon/components";
       </div>
       <div class="relative">
         <!-- Browser mockup: Forge side panel -->
-        <div class="rounded-2xl border border-black/10 bg-white shadow-xl overflow-hidden">
-          <div class="flex items-center gap-2 px-3 py-2.5 bg-[#f0eeea] border-b border-black/5">
+        <div class="rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-surface-dark shadow-xl overflow-hidden">
+          <div class="flex items-center gap-2 px-3 py-2.5 bg-[#f0eeea] dark:bg-[#2a2730] border-b border-black/5 dark:border-white/10">
             <div class="flex gap-1.5">
               <span class="w-2.5 h-2.5 rounded-full bg-[#fd6159]"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#fdbc2e]"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#27c83f]"></span>
             </div>
-            <div class="flex-1 ml-2 px-3 py-1 rounded-md bg-white border border-black/5 text-xs text-ink/50 font-mono">
+            <div class="flex-1 ml-2 px-3 py-1 rounded-md bg-white dark:bg-white/10 border border-black/5 dark:border-white/10 text-xs text-ink/50 dark:text-ink-dark/50 font-mono">
               yourapp.com/landing
             </div>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_220px] sm:min-h-[300px]">
             <!-- page preview with live change -->
-            <div class="p-5 border-b sm:border-b-0 sm:border-r border-black/5">
-              <h4 class="text-lg font-bold text-ink leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+            <div class="p-5 border-b sm:border-b-0 sm:border-r border-black/5 dark:border-white/10">
+              <h4 class="text-lg font-bold text-ink dark:text-ink-dark leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
                 Ship with a second pair of eyes.
               </h4>
               <a class="mt-3 inline-block rounded-md bg-accent text-white text-xs font-bold px-3 py-1.5">Install for Chrome</a>
-              <div class="mt-4 h-16 rounded-lg bg-gradient-to-br from-paper to-[#ece8e0]"></div>
-              <div class="mt-3 h-2 w-4/5 bg-[#ece8e0] rounded"></div>
-              <div class="mt-2 h-2 w-3/5 bg-[#ece8e0] rounded"></div>
+              <div class="mt-4 h-16 rounded-lg bg-gradient-to-br from-paper dark:from-surface-dark to-[#ece8e0] dark:to-[#2a2730]"></div>
+              <div class="mt-3 h-2 w-4/5 bg-[#ece8e0] dark:bg-white/10 rounded"></div>
+              <div class="mt-2 h-2 w-3/5 bg-[#ece8e0] dark:bg-white/10 rounded"></div>
             </div>
             <!-- side panel -->
-            <div class="p-3 bg-[#fcfbf9] flex flex-col gap-2">
-              <div class="flex items-center justify-between pb-2 border-b border-black/5">
+            <div class="p-3 bg-[#fcfbf9] dark:bg-[#1a1720] flex flex-col gap-2">
+              <div class="flex items-center justify-between pb-2 border-b border-black/5 dark:border-white/10">
                 <div class="flex items-center gap-1.5">
                   <span class="w-4 h-4 rounded bg-gradient-to-br from-primary to-accent grid place-items-center text-white text-[9px] font-serif font-bold">R</span>
                   <span class="font-serif font-bold text-xs">Reliquery</span>
                 </div>
-                <span class="text-[9px] text-ink/50 uppercase tracking-wider">Forge</span>
+                <span class="text-[9px] text-ink/50 dark:text-ink-dark/50 uppercase tracking-wider">Forge</span>
               </div>
-              <p class="text-[10px] text-ink/50 uppercase tracking-wider">Your prompt</p>
-              <div class="rounded-md border border-black/5 bg-white p-2 font-mono text-[10.5px] leading-snug text-ink">
-                <div class="text-[8.5px] font-sans font-bold uppercase tracking-wider text-primary mb-1">You</div>
+              <p class="text-[10px] text-ink/50 dark:text-ink-dark/50 uppercase tracking-wider">Your prompt</p>
+              <div class="rounded-md border border-black/5 dark:border-white/10 bg-white dark:bg-surface-dark p-2 font-mono text-[10.5px] leading-snug text-ink dark:text-ink-dark">
+                <div class="text-[8.5px] font-sans font-bold uppercase tracking-wider text-primary dark:text-primary-100 mb-1">You</div>
                 Make the hero one line. Bump the CTA to orange.
               </div>
-              <p class="text-[10px] text-ink/50 uppercase tracking-wider">CSS draft · applied live</p>
-              <div class="rounded-md border border-black/5 overflow-hidden font-mono text-[9.5px] leading-relaxed">
-                <div class="px-2 py-0.5 bg-[#fdecec] text-[#9b1c1c]">- .h1 &#123; font-size: 56px; &#125;</div>
-                <div class="px-2 py-0.5 bg-[#eaf7ed] text-[#19683a]">+ .h1 &#123; font-size: 48px;</div>
-                <div class="px-2 py-0.5 bg-[#eaf7ed] text-[#19683a]">+&nbsp;&nbsp;white-space: nowrap; &#125;</div>
-                <div class="px-2 py-0.5 bg-[#fdecec] text-[#9b1c1c]">- .cta &#123; background: #40053f; &#125;</div>
-                <div class="px-2 py-0.5 bg-[#eaf7ed] text-[#19683a]">+ .cta &#123; background: #f26709; &#125;</div>
+              <p class="text-[10px] text-ink/50 dark:text-ink-dark/50 uppercase tracking-wider">CSS draft · applied live</p>
+              <div class="rounded-md border border-black/5 dark:border-white/10 overflow-hidden font-mono text-[9.5px] leading-relaxed">
+                <div class="px-2 py-0.5 bg-[#fdecec] dark:bg-[#3d1c1c] text-[#9b1c1c] dark:text-[#f87171]">- .h1 &#123; font-size: 56px; &#125;</div>
+                <div class="px-2 py-0.5 bg-[#eaf7ed] dark:bg-[#1c3d22] text-[#19683a] dark:text-[#4ade80]">+ .h1 &#123; font-size: 48px;</div>
+                <div class="px-2 py-0.5 bg-[#eaf7ed] dark:bg-[#1c3d22] text-[#19683a] dark:text-[#4ade80]">+&nbsp;&nbsp;white-space: nowrap; &#125;</div>
+                <div class="px-2 py-0.5 bg-[#fdecec] dark:bg-[#3d1c1c] text-[#9b1c1c] dark:text-[#f87171]">- .cta &#123; background: #40053f; &#125;</div>
+                <div class="px-2 py-0.5 bg-[#eaf7ed] dark:bg-[#1c3d22] text-[#19683a] dark:text-[#4ade80]">+ .cta &#123; background: #f26709; &#125;</div>
               </div>
-              <p class="text-[9px] text-ink/50">BYO key · $0.004 this run</p>
+              <p class="text-[9px] text-ink/50 dark:text-ink-dark/50">BYO key · $0.004 this run</p>
             </div>
           </div>
         </div>
@@ -376,20 +376,20 @@ import { Icon } from "astro-icon/components";
   <!-- Built for -->
   <section class="mx-auto max-w-6xl px-6 py-16">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-ink">Built for people who care how their brand shows up.</h2>
+      <h2 class="text-3xl font-bold text-ink dark:text-ink-dark">Built for people who care how their brand shows up.</h2>
     </div>
     <div class="grid gap-6 md:grid-cols-3">
-      <div class="rounded-xl bg-white p-6 border border-black/5">
-        <p class="font-bold text-ink">Founders & Brand Owners</p>
-        <p class="mt-2 text-sm text-ink/70">You wrote the brand voice doc yourself. You feel personally responsible when something is off-brand. Reliquery catches drift without an agency.</p>
+      <div class="rounded-xl bg-white dark:bg-surface-dark p-6 border border-black/5 dark:border-white/10">
+        <p class="font-bold text-ink dark:text-ink-dark">Founders & Brand Owners</p>
+        <p class="mt-2 text-sm text-ink/70 dark:text-ink-dark/70">You wrote the brand voice doc yourself. You feel personally responsible when something is off-brand. Reliquery catches drift without an agency.</p>
       </div>
-      <div class="rounded-xl bg-white p-6 border border-black/5">
-        <p class="font-bold text-ink">Marketing Managers</p>
-        <p class="mt-2 text-sm text-ink/70">You own brand consistency across landing pages, blog posts, and product copy. Reliquery flags drift before it ships.</p>
+      <div class="rounded-xl bg-white dark:bg-surface-dark p-6 border border-black/5 dark:border-white/10">
+        <p class="font-bold text-ink dark:text-ink-dark">Marketing Managers</p>
+        <p class="mt-2 text-sm text-ink/70 dark:text-ink-dark/70">You own brand consistency across landing pages, blog posts, and product copy. Reliquery flags drift before it ships.</p>
       </div>
-      <div class="rounded-xl bg-white p-6 border border-black/5">
-        <p class="font-bold text-ink">Product Designers & Strategists</p>
-        <p class="mt-2 text-sm text-ink/70">You think in competitive positioning. Reliquery shows you what competitors do differently and lets you iterate without a dev cycle.</p>
+      <div class="rounded-xl bg-white dark:bg-surface-dark p-6 border border-black/5 dark:border-white/10">
+        <p class="font-bold text-ink dark:text-ink-dark">Product Designers & Strategists</p>
+        <p class="mt-2 text-sm text-ink/70 dark:text-ink-dark/70">You think in competitive positioning. Reliquery shows you what competitors do differently and lets you iterate without a dev cycle.</p>
       </div>
     </div>
   </section>
@@ -397,20 +397,20 @@ import { Icon } from "astro-icon/components";
   <!-- Pricing -->
   <section id="pricing" class="mx-auto max-w-3xl px-6 py-16">
     <div class="text-center mb-10">
-      <h2 class="text-3xl font-bold text-ink">Free during beta.</h2>
-      <p class="mt-3 text-ink/60 text-lg">Reliquery is free to install and use while we're in beta. Paid tiers are coming after launch.</p>
+      <h2 class="text-3xl font-bold text-ink dark:text-ink-dark">Free during beta.</h2>
+      <p class="mt-3 text-ink/60 dark:text-ink-dark/60 text-lg">Reliquery is free to install and use while we're in beta. Paid tiers are coming after launch.</p>
     </div>
-    <div class="rounded-2xl border-2 border-primary bg-white p-8 text-center">
-      <p class="text-xs font-bold text-primary uppercase tracking-widest">Beta access</p>
-      <p class="mt-3 text-4xl font-bold text-ink">$0</p>
-      <p class="mt-1 text-sm text-ink/50">No credit card. No usage limits during beta.</p>
-      <ul class="mt-6 space-y-2 text-sm text-ink/70 inline-block text-left">
+    <div class="rounded-2xl border-2 border-primary bg-white dark:bg-surface-dark p-8 text-center">
+      <p class="text-xs font-bold text-primary dark:text-primary-100 uppercase tracking-widest">Beta access</p>
+      <p class="mt-3 text-4xl font-bold text-ink dark:text-ink-dark">$0</p>
+      <p class="mt-1 text-sm text-ink/50 dark:text-ink-dark/50">No credit card. No usage limits during beta.</p>
+      <ul class="mt-6 space-y-2 text-sm text-ink/70 dark:text-ink-dark/70 inline-block text-left">
         <li>✓ All three modes — Audit, Scout, Forge</li>
         <li>✓ Brand Reliquary (GitHub or local folder)</li>
         <li>✓ Battle Card export</li>
         <li>✓ Bring your own Anthropic API key for Forge</li>
       </ul>
-      <p class="mt-8 text-xs text-ink/50 max-w-md mx-auto">
+      <p class="mt-8 text-xs text-ink/50 dark:text-ink-dark/50 max-w-md mx-auto">
         Beta users will keep beta access while we finalize pricing. We'll email you with plenty of
         notice before any paid tier kicks in — and only if you're using Reliquery enough to need one.
       </p>
@@ -419,8 +419,8 @@ import { Icon } from "astro-icon/components";
 
   <!-- Bottom CTA -->
   <section class="mx-auto max-w-4xl px-6 py-20 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-ink">Stop watching your brand drift.</h2>
-    <p class="mt-4 text-ink/70 text-lg">Add Reliquery to Chrome and audit your first page in 30 seconds.</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-ink dark:text-ink-dark">Stop watching your brand drift.</h2>
+    <p class="mt-4 text-ink/70 dark:text-ink-dark/70 text-lg">Add Reliquery to Chrome and audit your first page in 30 seconds.</p>
     <a href="#" class="mt-8 inline-block rounded-lg bg-primary px-8 py-4 text-white font-semibold text-lg hover:opacity-90 transition">
       Add to Chrome — Free
     </a>

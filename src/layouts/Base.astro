@@ -16,12 +16,22 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      // Apply dark mode class before first paint to prevent flash.
+      // Reads localStorage, falls back to system preference, defaults to light.
+      (function() {
+        const stored = localStorage.getItem('theme');
+        if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
-  <body class="bg-paper text-ink antialiased">
+  <body class="bg-paper dark:bg-paper-dark text-ink dark:text-ink-dark antialiased transition-colors duration-200">
     <div class="w-full text-center py-2.5 px-4 text-sm font-medium text-white" style="background: linear-gradient(135deg, #40053f, #f26709);">
       See how web developers and growth marketers are becoming brand heroes — <a href="https://www.youtube.com/watch?v=CqTZEanUzcY" target="_blank" rel="noopener noreferrer" class="underline font-semibold hover:opacity-80 transition">Watch the trailer &rarr;</a>
     </div>
-    <header class="border-b border-black/5 relative z-30">
+    <header class="border-b border-black/5 dark:border-white/10 relative z-30">
       <div class="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 font-bold text-lg text-primary">
           <span class="inline-block w-2 h-2 rounded-full bg-accent"></span>
@@ -30,19 +40,40 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 
         <!-- Desktop nav (md+) -->
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="/#how" class="text-ink/70 hover:text-primary transition">How it works</a>
-          <a href="/#pricing" class="text-ink/70 hover:text-primary transition">Pricing</a>
-          <a href="/privacy" class="text-ink/70 hover:text-primary transition">Privacy</a>
+          <a href="/#how" class="text-ink/70 dark:text-ink-dark/70 hover:text-primary transition">How it works</a>
+          <a href="/#pricing" class="text-ink/70 dark:text-ink-dark/70 hover:text-primary transition">Pricing</a>
+          <a href="/privacy" class="text-ink/70 dark:text-ink-dark/70 hover:text-primary transition">Privacy</a>
+          <button
+            id="theme-toggle"
+            type="button"
+            class="w-9 h-9 rounded-lg flex items-center justify-center text-ink/60 dark:text-ink-dark/60 hover:bg-black/5 dark:hover:bg-white/10 transition"
+            aria-label="Toggle dark mode"
+          >
+            <!-- Sun icon (shown in dark mode) -->
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" stroke-width="2"/><path stroke-linecap="round" stroke-width="2" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <!-- Moon icon (shown in light mode) -->
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </button>
           <a href="#" class="rounded-lg bg-primary px-4 py-2 text-white font-semibold hover:opacity-90 transition whitespace-nowrap">
             Add to Chrome
           </a>
         </nav>
 
         <!-- Mobile menu button (only visible below md) -->
+        <div class="md:hidden flex items-center gap-1">
+          <button
+            id="theme-toggle-mobile"
+            type="button"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-lg text-ink/60 dark:text-ink-dark/60 hover:bg-black/5 dark:hover:bg-white/10 transition"
+            aria-label="Toggle dark mode"
+          >
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" stroke-width="2"/><path stroke-linecap="round" stroke-width="2" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </button>
         <button
           id="mobile-menu-toggle"
           type="button"
-          class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-ink/80 hover:bg-black/5 transition"
+          class="inline-flex items-center justify-center w-10 h-10 rounded-lg text-ink/80 dark:text-ink-dark/80 hover:bg-black/5 dark:hover:bg-white/10 transition"
           aria-label="Open menu"
           aria-controls="mobile-menu"
           aria-expanded="false"
@@ -55,19 +86,20 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6L6 18" />
           </svg>
         </button>
+        </div>
       </div>
 
       <!-- Mobile menu drawer (collapsed by default, hidden on md+) -->
       <nav
         id="mobile-menu"
-        class="md:hidden hidden border-t border-black/5 bg-paper"
+        class="md:hidden hidden border-t border-black/5 dark:border-white/10 bg-paper dark:bg-paper-dark"
         aria-label="Mobile navigation"
       >
         <div class="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-1 text-base">
-          <a href="/#how" class="block py-3 text-ink/80 hover:text-primary transition">How it works</a>
-          <a href="/#pricing" class="block py-3 text-ink/80 hover:text-primary transition">Pricing</a>
-          <a href="/privacy" class="block py-3 text-ink/80 hover:text-primary transition">Privacy</a>
-          <a href="/support" class="block py-3 text-ink/80 hover:text-primary transition">Support</a>
+          <a href="/#how" class="block py-3 text-ink/80 dark:text-ink-dark/80 hover:text-primary transition">How it works</a>
+          <a href="/#pricing" class="block py-3 text-ink/80 dark:text-ink-dark/80 hover:text-primary transition">Pricing</a>
+          <a href="/privacy" class="block py-3 text-ink/80 dark:text-ink-dark/80 hover:text-primary transition">Privacy</a>
+          <a href="/support" class="block py-3 text-ink/80 dark:text-ink-dark/80 hover:text-primary transition">Support</a>
           <a href="#" class="mt-3 rounded-lg bg-primary px-4 py-3 text-white font-semibold hover:opacity-90 transition text-center">
             Add to Chrome
           </a>
@@ -76,6 +108,18 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     </header>
 
     <script>
+      // Dark mode toggle. Persists choice in localStorage; respects system
+      // preference on first visit. The `dark` class is applied on <html>
+      // before paint via an inline script in <head> to prevent flash.
+      (() => {
+        function toggleTheme() {
+          const isDark = document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+        document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+        document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+      })();
+
       // Mobile menu toggle. Vanilla JS, no framework — keeps the layout
       // light and avoids hydration overhead for a static marketing page.
       (() => {
@@ -122,12 +166,43 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       })();
     </script>
 
+    <style>
+      /* Global dark-mode overrides for article/prose pages so we don't have
+         to add dark: variants to hundreds of elements in privacy, terms,
+         support, and releases pages. */
+      :global(.dark) .prose-styles h1,
+      :global(.dark) .prose-styles h2,
+      :global(.dark) .prose-styles h3,
+      :global(.dark) .prose-styles strong,
+      :global(.dark) .prose-styles th {
+        color: #e8e6e1;
+      }
+      :global(.dark) .prose-styles p,
+      :global(.dark) .prose-styles li,
+      :global(.dark) .prose-styles td {
+        color: #e8e6e1cc; /* ink-dark/80 */
+      }
+      :global(.dark) .prose-styles a {
+        color: #ecd9eb; /* primary-100 */
+      }
+      :global(.dark) .prose-styles code {
+        color: #e8e6e1;
+        background: rgba(255,255,255,0.08);
+      }
+      :global(.dark) .prose-styles table {
+        border-color: rgba(255,255,255,0.1);
+      }
+      :global(.dark) .prose-styles tr {
+        border-color: rgba(255,255,255,0.06);
+      }
+    </style>
+
     <main>
       <slot />
     </main>
 
-    <footer class="border-t border-black/5 mt-24">
-      <div class="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-ink/60">
+    <footer class="border-t border-black/5 dark:border-white/10 mt-24">
+      <div class="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-ink/60 dark:text-ink-dark/60">
         <div>
           <span class="font-semibold text-primary">Reliquery</span> — Protect. Learn. Build.
         </div>
