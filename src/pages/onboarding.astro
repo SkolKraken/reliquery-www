@@ -4,7 +4,7 @@ import Base from "../layouts/Base.astro";
 <Base title="Get Started — Reliquery" description="Set up Reliquery in five minutes: install, sign in, connect your brand documents, and run your first analysis.">
   <article class="mx-auto max-w-3xl px-6 py-16 prose-styles">
     <h1 class="text-4xl font-bold text-ink">Get started with Reliquery</h1>
-    <p class="text-lg text-ink/60 mt-3">Five steps. Five minutes. Your first brand audit by the end.</p>
+    <p class="text-lg text-ink/60 mt-3">Eight steps to get fully set up. Your first brand audit by the end.</p>
 
     <!-- Step 1: Install -->
     <div class="mt-12 flex gap-5 items-start">
@@ -116,55 +116,126 @@ import Base from "../layouts/Base.astro";
       </div>
     </div>
 
-    <!-- Step 5: First analysis -->
+    <!-- Step 5: Permissions -->
     <div class="mt-12 flex gap-5 items-start">
-      <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">5</div>
+      <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">5</div>
+      <div class="flex-1">
+        <h2 class="text-2xl font-bold text-ink mt-0.5">Grant page access</h2>
+        <p class="mt-3 text-ink/80">
+          Reliquery needs permission to read the page you're analyzing. It never requests access in the background — you're always in control of which sites it can see.
+        </p>
+
+        <div class="mt-5 grid gap-3">
+          <div class="rounded-xl border-2 border-primary/20 bg-primary/5 p-5">
+            <p class="text-sm font-bold text-primary uppercase tracking-wider">Recommended: grant access to all sites</p>
+            <p class="mt-2 text-sm text-ink/80">
+              In the <strong>Settings</strong> dropdown, find the <strong>Page Access</strong> card and click <strong>Permit Reliquery to analyze web pages</strong>. Chrome will ask once whether to allow Reliquery on all sites. After that, you'll never see a permission prompt again.
+            </p>
+            <p class="mt-2 text-sm text-ink/60">
+              This is the smoothest experience — no interruptions when you switch between your site and a competitor's.
+            </p>
+          </div>
+          <div class="rounded-xl border border-black/10 bg-white p-5">
+            <p class="text-sm font-bold text-ink/70 uppercase tracking-wider">Alternative: per-site prompts</p>
+            <p class="mt-2 text-sm text-ink/80">
+              If you skip the broad grant, Chrome will show a per-site permission dialog the first time you click <strong>Analyze This Page</strong> on each new site. Click <strong>Allow</strong> to proceed. Each grant persists for that site, so you'll only see the prompt once per domain.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-4 rounded-xl border border-black/10 bg-white p-4">
+          <p class="text-sm text-ink/70"><strong>Revoking access:</strong> You can disable Reliquery's page access at any time. Open <strong>Settings</strong> → <strong>Page Access</strong> and click the <strong>Disable</strong> button. You can also manage permissions from <code>chrome://extensions</code> → Reliquery → Site access. Disabling access doesn't uninstall the extension — it just means Reliquery will ask for permission again the next time you analyze a page.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 6: First analysis -->
+    <div class="mt-12 flex gap-5 items-start">
+      <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">6</div>
       <div class="flex-1">
         <h2 class="text-2xl font-bold text-ink mt-0.5">Run your first audit</h2>
         <p class="mt-3 text-ink/80">
           Navigate to a page on your website in Chrome. Open the Reliquery side panel, make sure you're on the <strong>Audit</strong> tab, and click <strong>Analyze This Page</strong>.
         </p>
         <ol class="mt-4 space-y-2 text-ink/80 list-decimal pl-5">
-          <li>Chrome may ask you to grant Reliquery access to the site — click <strong>Allow</strong></li>
           <li>Reliquery extracts the page content and sends it (along with your brand documents) for analysis</li>
           <li>In about 15–30 seconds, you'll see a brand alignment score, drift findings with citations, and suggested rewrites</li>
+          <li>Every finding links back to the specific passage in your Brand Reliquary that it violates, so you always know <em>why</em> something was flagged</li>
         </ol>
         <p class="mt-4 text-ink/80">
-          That's it — you're set up. Every finding links back to the specific passage in your Brand Reliquary that it violates, so you always know <em>why</em> something was flagged.
+          Want to analyze a competitor instead? Switch to the <strong>Scout</strong> tab, navigate to a competitor's page, and click <strong>Analyze This Page</strong>. You'll get a side-by-side competitive breakdown — category claim, voice, pricing — compared against your own positioning.
         </p>
       </div>
     </div>
 
-    <!-- What's next -->
-    <div class="mt-16 rounded-2xl border border-black/10 bg-white p-8">
-      <h2 class="text-2xl font-bold text-ink">What's next</h2>
-      <div class="mt-5 grid gap-4">
-        <div class="flex gap-3 items-start">
-          <span class="text-xl">&#x2694;&#xFE0F;</span>
-          <div>
-            <p class="font-semibold text-ink">Try Scout mode</p>
-            <p class="text-sm text-ink/70">Navigate to a competitor's website and click <strong>Analyze This Page</strong> from the Scout tab. You'll get a side-by-side competitive breakdown — category claim, voice, pricing — compared against your own positioning.</p>
+    <!-- Step 7: Forge -->
+    <div class="mt-12 flex gap-5 items-start">
+      <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">7</div>
+      <div class="flex-1">
+        <h2 class="text-2xl font-bold text-ink mt-0.5">Set up Forge mode</h2>
+        <p class="mt-3 text-ink/80">
+          Forge lets you type a design instruction in plain English — "make the hero CTA more prominent," "swap the color scheme to dark mode" — and Reliquery applies the CSS and HTML changes live to the page. It requires a Pro subscription and your own Anthropic API key.
+        </p>
+
+        <h3 class="text-lg font-semibold text-ink mt-6">Getting your API key</h3>
+        <ol class="mt-3 space-y-2 text-ink/80 list-decimal pl-5">
+          <li>Go to <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" class="text-primary underline">console.anthropic.com</a> and create an account (or sign in)</li>
+          <li>Navigate to <strong>API Keys</strong> and create a new key</li>
+          <li>Copy the key — you'll only see it once</li>
+          <li>In Reliquery, switch to the <strong>Forge</strong> tab and paste your key into the setup field</li>
+        </ol>
+
+        <div class="mt-5 rounded-xl border border-primary/20 bg-primary/5 p-4">
+          <p class="text-sm font-semibold text-primary">Privacy and billing</p>
+          <ul class="mt-2 text-sm text-ink/80 list-disc pl-5 space-y-1">
+            <li>Your API key is stored locally in your browser (<code>chrome.storage.local</code>) and is <strong>never</strong> transmitted to Reliquery's servers</li>
+            <li>Forge requests are proxied through the Reliquery backend so Claude can see the page — your key is included in the outbound request to Anthropic and discarded immediately after</li>
+            <li>All Forge usage is billed directly to your own Anthropic account — you can see every request in your Anthropic dashboard</li>
+            <li>Revoking the key at <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" class="text-primary underline">console.anthropic.com</a> instantly disables Forge</li>
+          </ul>
+        </div>
+
+        <div class="mt-4 rounded-xl border border-black/10 bg-white p-4">
+          <p class="text-sm text-ink/70"><strong>Tip:</strong> Set a spend limit in your Anthropic dashboard to control costs. A typical Forge session costs a few cents — the side panel shows the cost of each request in real time.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 8: Usage and billing -->
+    <div class="mt-12 flex gap-5 items-start">
+      <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">8</div>
+      <div class="flex-1">
+        <h2 class="text-2xl font-bold text-ink mt-0.5">Understand your usage and plan</h2>
+        <p class="mt-3 text-ink/80">
+          Open the <strong>Account & Usage</strong> dropdown in the side panel to see your current plan and how many analyses you've used.
+        </p>
+
+        <div class="mt-5 grid gap-3">
+          <div class="rounded-xl border border-black/10 bg-white p-5">
+            <p class="text-sm font-bold text-ink uppercase tracking-wider">Usage tracker</p>
+            <p class="mt-2 text-sm text-ink/80">
+              The usage bar shows how many Audit and Scout analyses you've used out of your monthly limit (e.g. <strong>3/5</strong> on the free plan). The bar updates in real time after each analysis. Forge mode doesn't count toward your limit — it uses your own Anthropic key.
+            </p>
+          </div>
+          <div class="rounded-xl border border-black/10 bg-white p-5">
+            <p class="text-sm font-bold text-accent uppercase tracking-wider">Upgrading to Pro</p>
+            <p class="mt-2 text-sm text-ink/80">
+              When you're ready for more, click the <strong>Upgrade</strong> button next to the usage bar. This opens a Stripe checkout page in a new tab where you can subscribe to Pro. Your plan activates instantly — no need to reload the extension.
+            </p>
+            <p class="mt-2 text-sm text-ink/60">
+              Reliquery never sees your payment details. Stripe handles all billing securely. You can manage your subscription, update your payment method, or cancel at any time through Stripe's customer portal.
+            </p>
           </div>
         </div>
-        <div class="flex gap-3 items-start">
-          <span class="text-xl">&#x2692;&#xFE0F;</span>
-          <div>
-            <p class="font-semibold text-ink">Try Forge mode</p>
-            <p class="text-sm text-ink/70">Switch to the Forge tab, enter your <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" class="text-primary underline">Anthropic API key</a>, and type a design instruction in plain English. Reliquery applies the CSS and HTML changes live to the page. Forge requires a Pro subscription.</p>
-          </div>
-        </div>
-        <div class="flex gap-3 items-start">
-          <span class="text-xl">&#x1F4E4;</span>
-          <div>
-            <p class="font-semibold text-ink">Export a battle card</p>
-            <p class="text-sm text-ink/70">After a Scout analysis, use the export button to generate a battle card you can share with your team — a one-page competitive snapshot grounded in your own brand positioning.</p>
-          </div>
+
+        <div class="mt-4 rounded-xl border border-black/10 bg-white p-4">
+          <p class="text-sm text-ink/70"><strong>Free plan:</strong> 5 Audit + Scout analyses per month. <strong>Pro plan:</strong> 100 analyses per month, plus access to Forge mode. Unused analyses don't roll over.</p>
         </div>
       </div>
     </div>
 
     <!-- Help -->
-    <div class="mt-10 text-center">
+    <div class="mt-16 text-center">
       <p class="text-ink/60 text-sm">
         Stuck? Email <a href="mailto:support@reliquery.app" class="text-primary underline">support@reliquery.app</a>
         or check the <a href="/support" class="text-primary underline">support page</a>.
