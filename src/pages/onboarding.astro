@@ -46,50 +46,56 @@ import Base from "../layouts/Base.astro";
     <div class="mt-12 flex gap-5 items-start">
       <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">3</div>
       <div class="flex-1">
-        <h2 class="text-2xl font-bold text-ink mt-0.5">Connect your Brand Reliquary</h2>
+        <h2 class="text-2xl font-bold text-ink mt-0.5">Create and connect your Brand Reliquary</h2>
         <p class="mt-3 text-ink/80">
-          Your Brand Reliquary is the collection of documents that define your brand — voice guidelines, positioning statements, design principles, messaging frameworks, or anything else that captures how your brand should show up.
-        </p>
-        <p class="mt-3 text-ink/80">
-          Open the <strong>Settings</strong> dropdown in the side panel and find the <strong>Connect your Brand Reliquary</strong> card.
+          Your Brand Reliquary is the collection of documents that define your brand — voice guidelines, positioning statements, design principles, messaging frameworks, or anything else that captures how your brand should show up. Most teams don't have these in one place yet. That's normal — and it's the whole point.
         </p>
 
-        <div class="mt-5 grid gap-3">
-          <div class="rounded-xl border border-black/10 bg-white p-5">
-            <p class="text-sm font-bold text-primary uppercase tracking-wider">Option A: GitHub repository</p>
-            <p class="mt-2 text-sm text-ink/80">
-              If your brand documents live in a GitHub repo (public or private), paste the repository URL and click <strong>Connect</strong>. You can optionally specify a branch and subfolder path.
-            </p>
-            <p class="mt-2 text-sm text-ink/60">
-              Private repos require a GitHub personal access token with <code>repo</code> (read-only) scope. The token is stored in session-only storage and cleared when you close the browser.
-            </p>
-          </div>
-          <div class="rounded-xl border border-black/10 bg-white p-5">
-            <p class="text-sm font-bold text-accent uppercase tracking-wider">Option B: Local folder</p>
-            <p class="mt-2 text-sm text-ink/80">
-              If your brand documents are on your computer, click <strong>Choose folder</strong> and select the folder containing your files. Chrome will ask you to confirm access. Documents are read at analysis time and never uploaded.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-4 rounded-xl border border-primary/20 bg-primary/5 p-4">
-          <p class="text-sm font-semibold text-primary">What should go in your Brand Reliquary?</p>
-          <ul class="mt-2 text-sm text-ink/80 list-disc pl-5 space-y-1">
-            <li>Brand voice and tone guidelines</li>
-            <li>Positioning and messaging framework</li>
-            <li>Visual identity or design principles</li>
-            <li>Approved terminology and forbidden words</li>
-            <li>Mission, vision, and values statements</li>
-            <li>Boilerplate copy and taglines</li>
-          </ul>
-          <p class="mt-3 text-sm text-ink/60">
-            Markdown (<code>.md</code>) files work best. Plain text files work too. You don't need every document — even a single brand voice guide will dramatically improve your audits.
+        <!-- Starter template CTA — primary path for most users -->
+        <div class="mt-6 rounded-2xl border-2 border-primary bg-primary/5 p-6">
+          <p class="text-lg font-bold text-ink">Start from our template</p>
+          <p class="mt-2 text-ink/80">
+            We've built a starter Brand Reliquary with the files most teams need — voice and tone, positioning, visual identity, and approved terminology. Fork the repo, fill in the blanks with your brand's specifics, and connect it to Reliquery. Takes about 20 minutes.
           </p>
+          <a href="https://github.com/SkolKraken/brand-reliquary-starter" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block rounded-lg bg-primary px-5 py-2.5 text-white font-semibold text-sm hover:opacity-90 transition">
+            Fork the starter template on GitHub
+          </a>
+          <div class="mt-5 rounded-xl bg-white border border-black/10 p-4">
+            <p class="text-sm font-semibold text-ink">What's in the template:</p>
+            <ul class="mt-2 text-sm text-ink/70 list-disc pl-5 space-y-1">
+              <li><code>voice-and-tone.md</code> — How your brand sounds (formal vs casual, humor, vocabulary)</li>
+              <li><code>positioning.md</code> — What you do, who it's for, and why it matters</li>
+              <li><code>visual-identity.md</code> — Colors, typography, imagery guidelines</li>
+              <li><code>terminology.md</code> — Approved terms, forbidden words, and common mistakes</li>
+              <li><code>mission-and-values.md</code> — The promises your brand actually makes</li>
+              <li><code>boilerplate.md</code> — Taglines, one-liners, and elevator pitches</li>
+            </ul>
+            <p class="mt-3 text-sm text-ink/60">
+              Markdown (<code>.md</code>) files work best. You don't need every file — even a single voice guide will dramatically improve your audits. Start small and add more as you go.
+            </p>
+          </div>
         </div>
 
-        <p class="mt-4 text-sm text-ink/60">
-          Don't have brand documents yet? <a href="https://github.com/SkolKraken/brand-reliquary-starter" target="_blank" rel="noopener noreferrer" class="text-primary underline">Get started with our starter template</a> — fork it, fill in the blanks, and connect it to Reliquery.
+        <!-- Connect instructions -->
+        <h3 class="text-lg font-semibold text-ink mt-8">Connect it to Reliquery</h3>
+        <p class="mt-2 text-ink/80">
+          Once your Brand Reliquary exists (forked template or your own repo), open the <strong>Settings</strong> dropdown in the side panel and find the <strong>Connect your Brand Reliquary</strong> card.
         </p>
+
+        <div class="mt-4 grid gap-3">
+          <div class="rounded-xl border border-black/10 bg-white p-5">
+            <p class="text-sm font-bold text-primary uppercase tracking-wider">GitHub repository</p>
+            <p class="mt-2 text-sm text-ink/80">
+              Paste your repository URL and click <strong>Connect</strong>. You can optionally specify a branch and subfolder path. Private repos require a GitHub personal access token with <code>repo</code> (read-only) scope.
+            </p>
+          </div>
+          <div class="rounded-xl border border-black/10 bg-white p-5">
+            <p class="text-sm font-bold text-accent uppercase tracking-wider">Local folder</p>
+            <p class="mt-2 text-sm text-ink/80">
+              Prefer to keep files on your machine? Click <strong>Choose folder</strong> and select the folder containing your brand documents. Documents are read at analysis time and never uploaded.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
