@@ -25,10 +25,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script is:inline>
       // Apply dark mode class before first paint to prevent flash.
-      // Reads localStorage, falls back to system preference, defaults to light.
+      // Light mode is the default — only opt in to dark if the user has
+      // explicitly chosen it via the toggle. We deliberately ignore
+      // prefers-color-scheme so visitors land on the brand's light look.
       (function() {
-        const stored = localStorage.getItem('theme');
-        if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        if (localStorage.getItem('theme') === 'dark') {
           document.documentElement.classList.add('dark');
         }
       })();
