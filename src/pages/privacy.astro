@@ -4,7 +4,7 @@ import Base from "../layouts/Base.astro";
 <Base title="Privacy Policy — Reliquery" description="How Reliquery handles your data.">
   <article class="mx-auto max-w-3xl px-6 py-16 prose-styles">
     <h1 class="text-4xl font-bold text-ink">Privacy Policy</h1>
-    <p class="text-sm text-ink/50 mt-2">Last updated: May 4, 2026</p>
+    <p class="text-sm text-ink/50 mt-2">Last updated: May 10, 2026</p>
 
     <p class="mt-8 text-ink/80 leading-relaxed">
       Reliquery is a Chrome browser extension that helps brand owners, marketers, and product teams
@@ -115,6 +115,28 @@ import Base from "../layouts/Base.astro";
       usage counts and subscription status reference this UUID, not your email address.
     </p>
 
+    <h3 class="text-lg font-semibold text-ink mt-6">2.7 Technical request metadata</h3>
+    <p class="mt-2 text-ink/80">
+      To prevent fraud and abuse, respond to payment disputes, and debug operational issues,
+      Reliquery records the following metadata for each authenticated request to billable
+      endpoints (Audit, Scout, Forge, billing):
+    </p>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>IP address</li>
+      <li>User-Agent string (browser and version)</li>
+      <li>Timestamp</li>
+      <li>Endpoint accessed</li>
+      <li>Response status code</li>
+    </ul>
+    <p class="mt-3 text-ink/80">
+      This data is retained for <strong>180 days</strong> and is used solely for fraud
+      detection, chargeback dispute evidence, and operational debugging. It is never used
+      for advertising, profiling, or shared with third parties. The legal basis is our
+      legitimate interest in protecting the service from abuse and complying with payment
+      processor requirements. You can request deletion of this metadata at any time by
+      emailing <a href="mailto:support@reliquery.app" class="text-primary underline">support@reliquery.app</a>.
+    </p>
+
     <h2 class="text-2xl font-bold text-ink mt-10">3. What we do not collect</h2>
     <ul class="mt-3 text-ink/80 list-disc pl-6 space-y-1">
       <li>Browsing history</li>
@@ -132,7 +154,7 @@ import Base from "../layouts/Base.astro";
       <li><strong>GitHub</strong> — When you use GitHub Reliquary mode, Reliquery reads the files you specify from your connected repository. <a href="https://docs.github.com/en/site-policy/privacy-policies" class="text-primary underline">GitHub privacy policy</a></li>
       <li><strong>Supabase</strong> — Reliquery uses Supabase for authentication and database hosting. Your email address and account data are stored in Supabase's infrastructure (AWS, US regions). <a href="https://supabase.com/privacy" class="text-primary underline">Supabase privacy policy</a></li>
       <li><strong>Stripe</strong> — Reliquery uses Stripe to process subscription payments. When you upgrade to a paid plan, you interact directly with Stripe's checkout page. Reliquery does not receive, store, or have access to your payment card details; Stripe handles all payment data. Your Stripe customer ID is stored server-side to manage your subscription status. <a href="https://stripe.com/privacy" class="text-primary underline">Stripe privacy policy</a></li>
-      <li><strong>Cloud hosting (Vercel / Google Cloud Run)</strong> — Reliquery's backend is hosted on cloud infrastructure providers. Request data transits but is not retained.</li>
+      <li><strong>Cloud hosting (Vercel / Cloudflare)</strong> — Reliquery's backend is hosted on Vercel; the marketing site and landing pages are hosted on Cloudflare Pages. Like all hosted services, these platforms maintain short-term operational request logs (typically 1–7 days, retained by the platform for security and debugging) which include IP addresses and User-Agent strings. Reliquery's own application-level logging is described in §2.7. <a href="https://vercel.com/legal/privacy-policy" class="text-primary underline">Vercel privacy policy</a> · <a href="https://www.cloudflare.com/privacypolicy/" class="text-primary underline">Cloudflare privacy policy</a></li>
     </ul>
     <p class="mt-3 text-ink/80">Reliquery does not sell, rent, or share your data with advertisers, data brokers, or any other third parties.</p>
 
