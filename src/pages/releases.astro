@@ -6,6 +6,37 @@ import Base from "../layouts/Base.astro";
     <h1 class="text-4xl font-bold text-ink">Release History</h1>
     <p class="text-sm text-ink/50 mt-2">A changelog of every Reliquery release.</p>
 
+    <!-- v1.2.0 -->
+    <h2 class="text-2xl font-bold text-ink mt-10">v1.2.0 <span class="text-base font-normal text-ink/50">— May 2026</span></h2>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Billing & subscription management</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li><strong>Manage Subscription</strong> button for Pro users — update your card, view invoices, or cancel directly from the extension</li>
+      <li>Quota enforcement is now live: Free users see an upgrade prompt at 5 analyses per month</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Forge mode</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>Forge now requires your own Anthropic API key — clearer error message and automatic redirect to Settings if no key is saved</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Audit scoring</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>Recalibrated brand alignment scoring to use the full 0–100 range — scores now reflect meaningful differentiation instead of clustering in the 70s–80s</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Referrals</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>"Share Reliquery with a friend" button now copies your referral link to clipboard (works on all machines, no email client required)</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold text-ink mt-6">Backend</h3>
+    <ul class="mt-2 text-ink/80 list-disc pl-6 space-y-1">
+      <li>Webhook reliability improvements for subscription state transitions</li>
+      <li>Rate limiting on public referral endpoints</li>
+      <li>Daily automated cleanup of expired bonuses and stale data</li>
+    </ul>
+
     <!-- v1.1.0 -->
     <h2 class="text-2xl font-bold text-ink mt-10">v1.1.0 <span class="text-base font-normal text-ink/50">— May 2026</span></h2>
 
