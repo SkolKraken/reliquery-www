@@ -4,25 +4,34 @@ import { Icon } from "astro-icon/components";
 ---
 <Base>
   <!-- Hero -->
-  <section class="mx-auto max-w-6xl px-6 pt-20 pb-16 text-center">
-    <p class="inline-block rounded-full bg-primary/5 dark:bg-primary/20 text-primary dark:text-primary-100 text-xs font-semibold uppercase tracking-wider px-3 py-1">
-      Chrome extension · v1.1
-    </p>
-    <h1 class="mt-6 text-5xl sm:text-6xl font-bold tracking-tight text-ink dark:text-ink-dark leading-[1.05]">
-      Your brand's most valuable artifacts. <br class="hidden sm:block" />
-      <span class="bg-gradient-to-r from-primary dark:from-primary-100 to-accent bg-clip-text text-transparent">At work on every page.</span>
-    </h1>
-    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-      <a href="#" class="rounded-lg bg-primary px-6 py-3 text-white font-semibold hover:opacity-90 transition">
-        Add to Chrome — Free
-      </a>
-      <a href="#how" class="rounded-lg px-6 py-3 text-ink/70 dark:text-ink-dark/70 font-semibold hover:text-primary transition">
-        See how it works →
-      </a>
+  <section class="relative overflow-hidden">
+    <!-- Gradient background: brand purple → orange, with soft radial highlights -->
+    <div class="absolute inset-0 -z-10" style="background: linear-gradient(135deg, #40053f 0%, #6b1456 40%, #c84a18 80%, #f26709 100%);"></div>
+    <!-- Subtle radial light to give it depth -->
+    <div class="absolute inset-0 -z-10 opacity-40" style="background: radial-gradient(ellipse at top, rgba(255,255,255,0.25), transparent 60%);"></div>
+    <!-- Soft grain for texture (breaks the flatness AI sites tend to have) -->
+    <div class="absolute inset-0 -z-10 opacity-[0.08] mix-blend-overlay" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22/></filter><rect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/></svg>');"></div>
+
+    <div class="mx-auto max-w-6xl px-6 pt-20 pb-24 text-center">
+      <p class="inline-block rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 ring-1 ring-white/20">
+        Chrome extension · v1.2
+      </p>
+      <h1 class="mt-6 text-5xl sm:text-6xl font-bold tracking-tight text-white leading-[1.05] drop-shadow-sm">
+        Your brand's most valuable artifacts. <br class="hidden sm:block" />
+        <span class="italic font-serif text-white/95">At work on every page.</span>
+      </h1>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="#" class="rounded-lg bg-white text-primary px-6 py-3 font-semibold hover:bg-white/90 transition shadow-lg shadow-black/10">
+          Add to Chrome — Free
+        </a>
+        <a href="#how" class="rounded-lg px-6 py-3 text-white/90 font-semibold hover:text-white transition">
+          See how it works →
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-white/70">
+        Free during beta · No credit card · Paid tiers coming after launch
+      </p>
     </div>
-    <p class="mt-4 text-xs text-ink/50 dark:text-ink-dark/50">
-      Free during beta · No credit card · Paid tiers coming after launch
-    </p>
   </section>
 
   <!-- Three modes -->
