@@ -29,7 +29,7 @@ import { Icon } from "astro-icon/components";
         </a>
       </div>
       <p class="mt-4 text-xs text-white/70">
-        Free during beta · No credit card · Paid tiers coming after launch
+        Free tier available · No credit card to start · Pro from $12/mo
       </p>
     </div>
   </section>
@@ -411,25 +411,63 @@ import { Icon } from "astro-icon/components";
   </section>
 
   <!-- Pricing -->
-  <section id="pricing" class="mx-auto max-w-3xl px-6 py-16">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl font-bold text-ink dark:text-ink-dark">Free during beta.</h2>
-      <p class="mt-3 text-ink/60 dark:text-ink-dark/60 text-lg">Reliquery is free to install and use while we're in beta. Paid tiers are coming after launch.</p>
+  <section id="pricing" class="mx-auto max-w-6xl px-6 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-ink dark:text-ink-dark">Pricing</h2>
+      <p class="mt-3 text-ink/60 dark:text-ink-dark/60 text-lg">Start free. Upgrade when you need more.</p>
     </div>
-    <div class="rounded-2xl border-2 border-primary bg-white dark:bg-surface-dark p-8 text-center">
-      <p class="text-xs font-bold text-primary dark:text-primary-100 uppercase tracking-widest">Beta access</p>
-      <p class="mt-3 text-4xl font-bold text-ink dark:text-ink-dark">$0</p>
-      <p class="mt-1 text-sm text-ink/50 dark:text-ink-dark/50">No credit card. No usage limits during beta.</p>
-      <ul class="mt-6 space-y-2 text-sm text-ink/70 dark:text-ink-dark/70 inline-block text-left">
-        <li>✓ All three modes — Audit, Scout, Forge</li>
-        <li>✓ Brand Reliquary (GitHub or local folder)</li>
-        <li>✓ Battle Card export</li>
-        <li>✓ Bring your own Anthropic API key for Forge</li>
-      </ul>
-      <p class="mt-8 text-xs text-ink/50 dark:text-ink-dark/50 max-w-md mx-auto">
-        Beta users will keep beta access while we finalize pricing. We'll email you with plenty of
-        notice before any paid tier kicks in — and only if you're using Reliquery enough to need one.
-      </p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Free -->
+      <div class="rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-surface-dark p-8 flex flex-col">
+        <p class="text-xs font-bold text-ink/60 dark:text-ink-dark/60 uppercase tracking-widest">Free</p>
+        <p class="mt-3 text-4xl font-bold text-ink dark:text-ink-dark">$0<span class="text-base font-normal text-ink/50 dark:text-ink-dark/50">/mo</span></p>
+        <p class="mt-1 text-sm text-ink/50 dark:text-ink-dark/50">No credit card required.</p>
+        <ul class="mt-6 space-y-2 text-sm text-ink/70 dark:text-ink-dark/70 flex-1">
+          <li>✓ 5 analyses per month</li>
+          <li>✓ Audit + Scout modes</li>
+          <li>✓ Forge mode (your Anthropic key)</li>
+          <li>✓ Brand Reliquary (GitHub or local)</li>
+          <li>✓ Battle Card export</li>
+        </ul>
+        <a href="#" class="mt-8 block w-full text-center rounded-lg border border-primary text-primary dark:text-primary-100 dark:border-primary-100 px-4 py-3 font-semibold hover:bg-primary/5 dark:hover:bg-primary/20 transition">
+          Add to Chrome
+        </a>
+      </div>
+
+      <!-- Pro (highlighted) -->
+      <div class="rounded-2xl border-2 border-primary bg-white dark:bg-surface-dark p-8 flex flex-col relative shadow-lg shadow-primary/10">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Most popular</span>
+        <p class="text-xs font-bold text-primary dark:text-primary-100 uppercase tracking-widest">Pro</p>
+        <p class="mt-3 text-4xl font-bold text-ink dark:text-ink-dark">$12<span class="text-base font-normal text-ink/50 dark:text-ink-dark/50">/mo</span></p>
+        <p class="mt-1 text-sm text-ink/50 dark:text-ink-dark/50">Cancel anytime.</p>
+        <ul class="mt-6 space-y-2 text-sm text-ink/70 dark:text-ink-dark/70 flex-1">
+          <li>✓ <strong>100 analyses per month</strong></li>
+          <li>✓ Everything in Free</li>
+          <li>✓ Priority support</li>
+          <li>✓ Referral rewards (refer friends, earn analyses)</li>
+        </ul>
+        <a href="#" class="mt-8 block w-full text-center rounded-lg bg-primary text-white px-4 py-3 font-semibold hover:opacity-90 transition">
+          Start with Pro
+        </a>
+      </div>
+
+      <!-- Power User (coming soon) -->
+      <div class="rounded-2xl border border-dashed border-black/15 dark:border-white/15 bg-paper/50 dark:bg-surface-dark/50 p-8 flex flex-col">
+        <p class="text-xs font-bold text-accent uppercase tracking-widest">Power User</p>
+        <p class="mt-3 text-4xl font-bold text-ink/60 dark:text-ink-dark/60">Coming soon</p>
+        <p class="mt-1 text-sm text-ink/50 dark:text-ink-dark/50">For teams and heavy hitters.</p>
+        <ul class="mt-6 space-y-2 text-sm text-ink/60 dark:text-ink-dark/60 flex-1">
+          <li>· Unlimited analyses</li>
+          <li>· Team / multi-seat</li>
+          <li>· Shared Brand Reliquaries</li>
+          <li>· Advanced reporting</li>
+          <li>· Priority queue</li>
+        </ul>
+        <button disabled class="mt-8 block w-full text-center rounded-lg border border-black/15 dark:border-white/15 text-ink/50 dark:text-ink-dark/50 px-4 py-3 font-semibold cursor-not-allowed">
+          Notify me
+        </button>
+      </div>
     </div>
   </section>
 
